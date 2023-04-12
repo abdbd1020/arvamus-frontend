@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage  from "./LoginPage";
+import SignupChoice from "./SignupChoice";
+import Signup from "./SignUp";
+import HomePage from "./HomePage";
+import Reviews from "./Reviews/Reviews"
+import Ratings from "./Ratings/Ratings"
+import Settings from "./Settings/Settings"
+
+// import { Navbar } from "./Navbar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
+          <Route path="/" element={<LoginPage />} />
+          {/* <Route path="/" element={<Signup />} /> */}
+          {/* <Route path="/" element={<SignupChoice />} /> */}
+          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route path="/signupChoice" element={<SignupChoice />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/ratings" element={<Ratings />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

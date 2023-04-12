@@ -1,0 +1,153 @@
+import React, { useState } from "react";
+import "./SignUp.css"
+import logoImage from "./Images/logor.png"
+
+function Signup() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [registrationNumber, setRegistrationNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const errors = validateForm();
+    if (Object.keys(errors).length === 0) {
+      // submit the form data to the server
+      console.log("Form submitted successfully!");
+    } else {
+      setErrors(errors);
+    }
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!firstName.trim()) {
+      errors.firstName = "First name is required";
+    }
+    if (!lastName.trim()) {
+      errors.lastName = "Last name is required";
+    }
+    if (!email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Invalid email format";
+    }
+    if (!registrationNumber.trim()) {
+      errors.registrationNumber = "Registration number is required";
+    }
+    if (!password) {
+      errors.password = "Password is required";
+    } else if (password.length < 6) {
+      errors.password = "Password must be at least 6 characters long";
+    }
+    if (password !== confirmPassword) {
+      errors.confirmPassword = "Passwords do not match";
+    }
+    return errors;
+  };
+
+  return (
+    <div className="signup-container">
+      <img src={logoImage} alt="Logo" className="logo-image2" />
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <h2>Sign Up</h2>
+        <div className="signup-row">
+          <div className="signup-field">
+            <label className="form-label" htmlFor="first-name">First Name*</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              value={firstName}
+              placeholder="Enter First Name"
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+            />
+            {errors.firstName && <p className="error">{errors.firstName}</p>}
+          </div>
+          <div className="signup-field">
+            <label className="form-label"  htmlFor="last-name">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              value={lastName}
+              placeholder="Enter Last name"
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+            {errors.lastName && <p className="error">{errors.lastName}</p>}
+          </div>
+        </div>
+        <div className="signup-row">
+          <div className="signup-field">
+            <label className="form-label" htmlFor="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              placeholder="Enter Email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
+          <div className="signup-field">
+            <label className="form-label" htmlFor="registration-number">Registration Number*</label>
+            <input
+              type="text"
+              id="registration-number"
+              name="registration-number"
+              value={registrationNumber}
+              placeholder="Enter Registration Number"
+              onChange={(e) => setRegistrationNumber(e.target.value)}
+              required
+            />
+            {errors.registrationNumber && (
+              <p className="error">{errors.registrationNumber}</p>
+            )}
+          </div>
+        </div>
+        <div className="signup-row">
+        <div className="signup-field">
+            <label className="form-label" htmlFor="password">Password*</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={password}
+              placeholder="Enter Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {errors.password && <p className="error">{errors.password}</p>}
+          </div>
+          <div className="signup-field">
+            <label className="form-label" htmlFor="confirm-password">Confirm Password*</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              value={confirmPassword}
+              placeholder="Confirm Password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            {errors.confirmPassword && (
+              <p className="error">{errors.confirmPassword}</p>
+            )}
+          </div>
+        </div>
+        <button type="submit" className="signup-button">
+          Sign Up
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default Signup;
