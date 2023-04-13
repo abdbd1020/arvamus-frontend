@@ -28,7 +28,7 @@ const HomePage = () => {
             <Profile
                 picture= {studentImage}
                 name = "Farhan Mahmud"
-                regno = "2018-725-311"
+                regno = "mahmud.farhan1903@gmail.com"
             />
 
             <div className="listii">

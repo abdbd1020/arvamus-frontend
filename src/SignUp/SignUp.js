@@ -36,7 +36,7 @@ function Signup() {
       errors.email = "Invalid email format";
     }
     if (!registrationNumber.trim()) {
-      errors.registrationNumber = "Registration number is required";
+      errors.registrationNumber = "Phone number is required";
     }
     if (!password) {
       errors.password = "Password is required";
@@ -97,13 +97,13 @@ function Signup() {
             {errors.email && <p className="error">{errors.email}</p>}
           </div>
           <div className="signup-field">
-            <label className="form-label" htmlFor="registration-number">Registration Number*</label>
+            <label className="form-label" htmlFor="registration-number">Phone Number*</label>
             <input
               type="text"
               id="registration-number"
               name="registration-number"
               value={registrationNumber}
-              placeholder="Enter Registration Number"
+              placeholder="Enter Phone Number"
               onChange={(e) => setRegistrationNumber(e.target.value)}
               required
             />
