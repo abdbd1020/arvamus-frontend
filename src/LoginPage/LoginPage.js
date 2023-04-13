@@ -29,7 +29,7 @@ function LoginPage() {
       alert("Login failed");
       
     } else {
-      Window.location.href = "/home";
+      window.location.href = "/home";
 
     }
     event.preventDefault();

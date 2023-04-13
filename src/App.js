@@ -18,11 +18,13 @@ function App() {
         <Routes>
           <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
           <Route path="/" element={<LoginPage />} />
+          <Route path= "/login" element={<LoginPage />} />
           {/* <Route path="/" element={<Signup />} /> */}
           {/* <Route path="/" element={<SignupChoice />} /> */}
           {/* <Route path="/" element={<HomePage />} /> */}
           <Route path="/signupChoice" element={<SignupChoice />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/ratings" element={<Ratings />} />

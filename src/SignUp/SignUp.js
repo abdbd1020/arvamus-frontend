@@ -13,25 +13,28 @@ function Signup() {
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (event) => {
-
     event.preventDefault();
     const errors = validateForm();
     const type = "STUDENT";
-    const mobile = registrationNumber;
-    const data = JSON.stringify({
-      firstName,
-      lastName,
-      email,
-      password,
-      mobile,
-      type
+    const body = JSON.stringify({
+      firstName: firstName,
+      lastName : lastName,
+      email : email,
+      mobile : registrationNumber,
+      password : password,
+      type : type
     });
+
     if (Object.keys(errors).length === 0) {
-      // submit the form data to the server
-      if (userService.userSignUp(data)) {
-        prompt("User registered successfully")
-        window.location.href = "./";
+      const response = userService.userSignUp(body);
+      if(response === null){
+        alert("Signup failed");
+      } else {
+        alert("Signup successful");
+        window.location.href = "./login";
       }
+      // submit the form data to the server
+      console.log("Form submitted successfully!");
     } else {
       setErrors(errors);
     }
@@ -51,7 +54,7 @@ function Signup() {
       errors.email = "Invalid email format";
     }
     if (!registrationNumber.trim()) {
-      errors.registrationNumber = "Phone number is required";
+      errors.registrationNumber = "Registration number is required";
     }
     if (!password) {
       errors.password = "Password is required";
@@ -112,13 +115,13 @@ function Signup() {
             {errors.email && <p className="error">{errors.email}</p>}
           </div>
           <div className="signup-field">
-            <label className="form-label" htmlFor="registration-number">Phone Number*</label>
+            <label className="form-label" htmlFor="registration-number">Registration Number*</label>
             <input
               type="text"
               id="registration-number"
               name="registration-number"
               value={registrationNumber}
-              placeholder="Enter Phone Number"
+              placeholder="Enter Registration Number"
               onChange={(e) => setRegistrationNumber(e.target.value)}
               required
             />
