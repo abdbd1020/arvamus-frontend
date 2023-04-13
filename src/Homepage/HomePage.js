@@ -1,15 +1,11 @@
 import React from 'react';
 import './HomePage.css';
-import profBack from "./Images/profback.jpg"
-import backgroundImage3 from "./Images/finbig.png";
+// import profBack from "./Images/profback.jpg"
+// import backgroundImage3 from "./Images/finbig.png";
 import Sidebar from './Sidebar';
-import studentImage from './Images/student4.png'
+import Profile from './Profile';
+import studentImage from '../Images/student4.png'
 import StarRating from './StarRating';
-// import About from './pages/About.jsx';
-// import Analytics from './pages/Analytics.jsx';
-// import Comment from './pages/Comment.jsx';
-// import Product from './pages/Product.jsx';
-// import ProductList from './pages/ProductList.jsx';
 
 function ListItem(props) {
     return (
@@ -29,13 +25,11 @@ const HomePage = () => {
             className='home-page-container'
             // style={{ backgroundImage: `url(${profBack})` }}
         >
-            <div 
-                className="profile"
-                // style={{ backgroundImage: `url(${profBack})` }}
-            >
-                <img className='profile-image' src={studentImage} alt="Profile" />
-                <h2>Farhan Mahmud</h2>
-            </div>
+            <Profile
+                picture= {studentImage}
+                name = "Farhan Mahmud"
+                regno = "2018-725-311"
+            />
 
             <div className="listii">
                 <div className="list-container">

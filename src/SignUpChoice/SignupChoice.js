@@ -1,9 +1,9 @@
 import React from 'react';
 import "./SignupChoice.css";
-import studentImage from "./Images/student4.png"
-import teacherImgae from "./Images/teacher4.png"
-import staffImage from "./Images/staff4.png"
-import backgroundImage2 from "./Images/finbig.png"
+import studentImage from "../Images/student4.png"
+import teacherImgae from "../Images/teacher4.png"
+import staffImage from "../Images/staff4.png"
+import backgroundImage2 from "../Images/finbig.png"
 
 const ImageWithText = (props) => (
   <div className= {props.className} onClick={goToSignUpPage}>
@@ -20,7 +20,7 @@ function goToSignUpPage()
 
 const SignupChoice = () => (
   <div className= 'image-group'
-    style={{ backgroundImage: `url(${backgroundImage2})` }}
+    // style={{ backgroundImage: `url(${backgroundImage2})` }}
    >
     <ImageWithText
       className = "student-image"

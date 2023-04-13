@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginPage.css"; // import the CSS file
-import backgroundImage from "./Images/finbig.png";
-import logoImage from "./Images/logor.png";
+import backgroundImage from "../Images/finbig.png";
+import logoImage from "../Images/logor.png";
 
 function LoginPage() {
   const [email, setEmail] = useState("");

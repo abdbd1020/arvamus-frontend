@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage  from "./LoginPage";
-import SignupChoice from "./SignupChoice";
-import Signup from "./SignUp";
-import HomePage from "./HomePage";
+import LoginPage  from "./LoginPage/LoginPage";
+import SignupChoice from "./SignUpChoice/SignupChoice";
+import Signup from "./SignUp/SignUp";
+import HomePage from "./Homepage/HomePage";
 import Reviews from "./Reviews/Reviews"
 import Ratings from "./Ratings/Ratings"
 import Settings from "./Settings/Settings"
