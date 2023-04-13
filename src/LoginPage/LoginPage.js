@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./LoginPage.css"; // import the CSS file
 import backgroundImage from "../Images/finbig.png";
 import logoImage from "../Images/logor.png";
+import userService from "../Services/userService";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -16,8 +17,21 @@ function LoginPage() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    window.location.href = "./home";
+  const handleSubmit = async (event) => {
+    if(!email || !password){
+      alert("Please enter your email and password")
+    }
+    const body = JSON.stringify({
+      email: email,
+      password: password
+    });
+    if (userService.userLogin(body) === 0) {
+      alert("Login failed");
+      
+    } else {
+      Window.location.href = "/home";
+
+    }
     event.preventDefault();
     // handle login logic here
   };

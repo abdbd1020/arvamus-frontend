@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SignUp.css"
 import logoImage from "../Images/logor.png"
+import userService from "../Services/userService";
 
 function Signup() {
   const [firstName, setFirstName] = useState("");
@@ -12,11 +13,25 @@ function Signup() {
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (event) => {
+
     event.preventDefault();
     const errors = validateForm();
+    const type = "STUDENT";
+    const mobile = registrationNumber;
+    const data = JSON.stringify({
+      firstName,
+      lastName,
+      email,
+      password,
+      mobile,
+      type
+    });
     if (Object.keys(errors).length === 0) {
       // submit the form data to the server
-      console.log("Form submitted successfully!");
+      if (userService.userSignUp(data)) {
+        prompt("User registered successfully")
+        window.location.href = "./";
+      }
     } else {
       setErrors(errors);
     }
