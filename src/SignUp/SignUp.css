@@ -1,21 +1,23 @@
+.body{
+  font-family: var(--font2) !important;
+}
+
 .signup-container {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   height: 100vh;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   padding: 2rem;
 }
 
 .signup-container > :first-child {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .logo-image2{
-  width: 120px;
+  width: 7%;
   margin-bottom: 3%;
 }
 
@@ -28,7 +30,7 @@
   background-color: #fff;
   flex-direction: column;
   align-items: center;
-  border: 3px solid red;
+  border: 3px solid #E5E7E9;
   border-radius: 10px;
 }
 
@@ -55,6 +57,7 @@
   display: block;
   margin-bottom: 0.5rem;
   text-align: left;
+  font-family: var(--font2);
   font-weight: bold;
   font-size: large;
 }
@@ -62,8 +65,9 @@
 .signup-field input {
   width: 100%;
   padding: 0.5rem;
-  border: 2px solid red;
-  border-radius: 5px;
+  border: 2px solid #E5E7E9;
+  font-family: var(--font2);
+  border-radius: 20px;
   background-color: #E5E7E9;
 }
 

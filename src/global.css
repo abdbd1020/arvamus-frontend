@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('./fonts/Bree_Serif/BreeSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url('./fonts/Domine/Domine-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+:root {
+    --font1: 'Font1', sans-serif;
+    --font2: 'Font2', sans-serif;
+}
