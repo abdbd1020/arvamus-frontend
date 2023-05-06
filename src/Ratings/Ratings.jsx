@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../Homepage/Sidebar';
+import Sidebar from '../Dashborad/Sidebar';
 
 const Ratings = () => {
     return (

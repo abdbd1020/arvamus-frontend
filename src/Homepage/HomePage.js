@@ -1,87 +1,52 @@
-import React from 'react';
-import './HomePage.css';
-// import profBack from "./Images/profback.jpg"
-// import backgroundImage3 from "./Images/finbig.png";
-import Sidebar from './Sidebar';
-import Profile from './Profile';
-import studentImage from '../Images/student4.png'
-import StarRating from './StarRating';
+import React, { useState } from 'react';
+import './Homepage.css';
+import Navbar from '../Navbar';
+import PageElement from './PageElement';
+import aboutImage from '../Images/logor.png'
 
-function ListItem(props) {
-    return (
-      <div className="list-item">
-        <div class="item-heading">
-            <p>{props.title}</p>
-        </div>
-        <p>{props.text}</p>
-      </div>
-    );
-  }
+const Homepage = () => {
+  const [activePage, setActivePage] = useState(0);
 
-const HomePage = () => {
+  const handleNextPage = () => {
+    setActivePage(activePage === 3 ? 0 : activePage + 1);
+  };
+
+  const handlePrevPage = () => {
+    setActivePage(activePage === 0 ? 3 : activePage - 1);
+  };
+
   return (
-    <Sidebar>
-        <div
-            className='home-page-container'
-            // style={{ backgroundImage: `url(${profBack})` }}
-        >
-            <Profile
-                picture= {studentImage}
-                name = "Farhan Mahmud"
-                regno = "mahmud.farhan1903@gmail.com"
-            />
-
-            <div className="listii">
-                <div className="list-container">
-                    <div class="list-header">
-                        <div class="heading-wrapper">
-                            <h2>Reviews</h2>
-                        </div>
+    <>
+        <Navbar />
+        <div className="about-page">
+            <div className="slider">
+                <div className={`slide active-slide-${activePage}`}>
+                    <PageElement
+                        heading = "About"
+                        description = "This is a paragraph text which is for testing"
+                        src = {aboutImage}
+                    /> 
                     </div>
-                    <ul className="list">
-                    <li>
-                        <ListItem title="Item 1" text= "lorem()"/>
-                    </li>
-                    <li>
-                        <ListItem title="Item 2" text="This is some text for Item 2." />
-                    </li>
-                    <li>
-                        <ListItem title="Item 3" text="This is some text for Item 3." />
-                    </li>
-                    </ul>
+                    <div className={`slide active-slide-${activePage === 3 ? 0 : activePage + 1}`}>
+                    <h2>Page 2</h2>
+                    <p>Content for page 2 goes here.</p>
+                    </div>
+                    <div className={`slide active-slide-${activePage === 3 ? 1 : activePage + 2}`}>
+                    <h2>Page 3</h2>
+                    <p>Content for page 3 goes here.</p>
+                    </div>
+                    <div className={`slide active-slide-${activePage === 3 ? 2 : activePage + 3}`}>
+                    <h2>Page 4</h2>
+                    <p>Content for page 4 goes here.</p>
+                    </div>
+                    <div className="slider-arrows">
+                    <button onClick={handlePrevPage}>&larr;</button>
+                    <button onClick={handleNextPage}>&rarr;</button>
                 </div>
-                <div className="separator"></div>
-                <div className="list-container">
-                    <div class="list-header">
-                        <div class="star-heading-wrapper">
-                            <h2>Ratings</h2>
-                        </div>
-                    </div>
-                    <ul className="list">
-                        <div className="star-item">
-                        <div class="item-heading">
-                            <p>Teacher</p>
-                        </div>
-                            <StarRating rating={3.5} />
-                        </div>
-                        <div className="star-item">
-                            <div class="item-heading">
-                                <p>Teacher</p>
-                            </div>
-                            <StarRating rating={5} />
-                        </div>
-                        <div className="star-item">
-                            <div class="item-heading">
-                                <p>Teacher</p>
-                            </div>
-                            <StarRating rating={2} />
-                        </div>
-                    </ul>
             </div>
-    </div>
         </div>
-    </Sidebar>
-    );
+    </>
+  );
 };
 
-export default HomePage;
+export default Homepage;

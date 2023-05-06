@@ -1,0 +1,23 @@
+.reviews-teacher-container {
+    display: flex;
+    /* grid-template-columns: auto 1fr auto; */
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+    /* background-color: #f2f2f2; */
+    /* background-color: lightgray; */
+    padding: 15px;
+    /* border: 2px red solid; */
+    /* border-radius: 30%;    */
+}
+
+.review-list {
+    list-style: none;
+    padding: 20px;
+}
+  
+.review-list li {
+    padding: 5px 0;
+    width: 90%;
+    border-radius: 10%;
+}

@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #E5E7E9;
+    height: 70%;
+    background-color: white
+  }
+  
+  .left-section {
+    width: 70%;
+  }
+  
+  .right-section {
+    width: 30%;
+    background: #333;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
