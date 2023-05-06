@@ -1,22 +1,40 @@
-.container {
+.element-container {
     display: flex;
     flex-direction: row;
     border: 2px solid #E5E7E9;
     height: 70%;
+    width: 68%;
+    margin-top: 3%;
+    margin-left: 16%;
+    justify-content: center;
+    align-self: center;
     background-color: white
   }
+
   
-  .left-section {
+.left-section {
     width: 70%;
-  }
-  
-  .right-section {
+}
+
+.element-heading{
+    margin-top: 5%;
+}
+
+.element-description{
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 7%;
+}
+
+.right-section {
     width: 30%;
     background: #333;
-  }
+}
   
-  img {
+.about-element-image{
     max-width: 100%;
+    margin-top: 40%;
     height: auto;
-  }
+}
   

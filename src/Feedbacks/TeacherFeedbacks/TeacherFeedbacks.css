@@ -1,0 +1,13 @@
+.teacher-list {
+    list-style: none;
+    padding: 0;
+}
+  
+.teacher-list li {
+    padding: 10px 0;
+}
+
+.review-page-heading{
+     margin-bottom: 2%;
+     margin-top: 1%;
+}

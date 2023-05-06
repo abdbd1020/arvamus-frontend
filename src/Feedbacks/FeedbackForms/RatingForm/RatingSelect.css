@@ -1,0 +1,31 @@
+.rating-select {
+    display: inline-block;
+    font-size: 24px;
+  }
+
+  .rating-star {
+    color: #d8d8d8;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  
+  .filled {
+    color: red;
+  }
+  
+  .half-filled {
+    color: red;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .half-filled:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  

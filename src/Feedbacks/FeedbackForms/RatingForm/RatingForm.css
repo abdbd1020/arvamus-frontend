@@ -1,0 +1,63 @@
+.rating-giving-container{
+}
+
+.rating-form-heading {
+    margin-top: 5%;
+}
+  
+
+
+.rating-form-container {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-width: 3px;
+    border-style: solid;
+    border: #E5E7E9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 26%;
+    height: 50%;
+    text-align: left;
+    margin-left: 35%;
+
+    border-radius: 2%;
+  }
+
+  .rating-giving-section{
+    margin-top: 5%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    width: 400px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

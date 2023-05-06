@@ -42,7 +42,7 @@
   .slider-arrows {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 47%;
     transform: translateX(-50%);
     margin-bottom: 30px;
   }

@@ -1,30 +1,28 @@
 import React from 'react';
-import './Dashboard.css';
-// import profBack from "./Images/profback.jpg"
-// import backgroundImage3 from "./Images/finbig.png";
-import Sidebar from './Sidebar/Sidebar';
-import Profile from './Profile';
-import profileImage from '../Images/prof1.jpg';
-import studentImage from '../Images/student4.png'
-import teacherImage from '../Images/teacher4.png'
-import staffImage from '../Images/staff4.png'
-import StarRating from './StarRating';
-import ReviewItem from './ReviewItem/ReviewItem';
-import RatingItem from './RatingItem/RatingItem';
+import './IndividualStaff.css';
+import Sidebar from '../../../Dashborad/Sidebar/Sidebar';
+import Profile from '../../../Dashborad/Profile';
+import profileImage from '../../../Images/prof1.jpg';
+import studentImage from '../../../Images/student4.png'
+// import teacherImage from '../Images/teacher4.png'
+// import staffImage from '../Images/staff4.png'
+// import StarRating from './StarRating';
+import ReviewItem from '../../../Dashborad/ReviewItem/ReviewItem';
+import RatingItem from '../../../Dashborad/RatingItem/RatingItem';
+import StaffReviewProfile from './StaffReviewProfile';
 
-const Dashboard = () => {
+const IndividualStaff = () => {
   return (
     <Sidebar>
         <div
             className='home-page-container'
             // style={{ backgroundImage: `url(${profBack})` }}
         >
-            <Profile
-                className = 'homepage-profile'
-                picture= {profileImage}
-                name = "Farhan Mahmud"
-                regno = "mahmud.farhan1903@gmail.com"
-                impression = "Good"
+            <StaffReviewProfile
+                src = {profileImage}
+                staffName = "Farhan Mahmud"
+                staffDesignation = "Professor"
+                impression = "Positive"
                 rating = {4}
             />
 
@@ -114,4 +112,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default IndividualStaff;

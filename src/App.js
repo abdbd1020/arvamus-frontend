@@ -4,14 +4,16 @@ import Homepage from "./Homepage/Homepage";
 import LoginPage  from "./LoginPage/LoginPage";
 import Signup from "./SignUp/SignUp";
 import Dashboard from "./Dashborad/Dashoboard";
-import Reviews from "./Reviews/Reviews"
-import Ratings from "./Ratings/Ratings"
 import Settings from "./Settings/Settings"
-import TeacherReviews from "./Reviews/TeacherReviews/TeacherReviews";
-import IndividualReviews from "./Reviews/TeacherReviews/IndividualReview/IndividualReview";
-import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
-
-// import { Navbar } from "./Navbar";
+import IndividualReview from "./Feedbacks/TeacherFeedbacks/Individual Reviews/IndividualReview";
+import TeacherFeedbacks from "./Feedbacks/TeacherFeedbacks/TeacherFeedbacks";
+import InfrastructureFeedbacks from "./Feedbacks/InfrastructureFeedbacks/InsfrastructureFeedbacks";
+import StaffFeedbacks from "./Feedbacks/StaffFeedbacks/StaffFeedbacks";
+import ReviewForm from "./Feedbacks/FeedbackForms/ReviewForm/ReviewForm";
+import RatingSelect from "./Feedbacks/FeedbackForms/RatingForm/RatingSelect";
+import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
+import IndividualStaff from "./Feedbacks/StaffFeedbacks/IndividualStaff/IndividualStaff";
+// import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 function App() {
   return (
@@ -31,12 +33,17 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/ratings" element={<Ratings />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/teacherev" element={<TeacherReviews />}/>
-          <Route path="/indteacherev" element={<IndividualReviews />}/>
-          <Route path="/addreview" element={<ReviewForm />}/>
+          <Route path="/teacherfeedbacks" element={<TeacherFeedbacks />}/>
+          <Route path="/infrafeedbacks" element={<InfrastructureFeedbacks />}/>
+          <Route path="/teacherfeedbacks" element={<StaffFeedbacks />}/>
+          <Route path="/staffeedbacks" element={<InfrastructureFeedbacks />}/>
+          <Route path="/indteacherev" element={<IndividualReview />}/>
+          <Route path="/indstaffrev" element={<IndividualStaff />}/>
+          <Route path="/reviewform" element={<ReviewForm />}/>
+          <Route path="/ratingform" element={<RatingForm />}/>
+          <Route path="/test" element={<RatingSelect />}/>
+          {/* <Route path="/addreview" element={<ReviewForm />}/> */}
         </Routes>
       </Router>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../Dashborad/Sidebar';
+import Sidebar from '../Dashborad/Sidebar/Sidebar';
 
 const Settings = () => {
     return (

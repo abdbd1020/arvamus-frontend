@@ -1,0 +1,115 @@
+.staff-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    /* align-items: center; */
+    width: 95%;
+    /* background-color: #f2f2f2; */
+    background-color: #394867 !important;
+    padding: 15px;
+    border: 1px solid #efefef;
+    color: white;
+    border-radius: 20px;
+    /* border-radius: 30%;    */
+}
+
+.staff-image-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.staff-round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.staff-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.staff-text-block {
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.staff-name{
+    margin-bottom: 2%;
+}
+
+.staff-designation{
+    margin-bottom: 3%;
+}
+
+.icon-link-container {
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 90%;
+}
+
+.icon-link-container:hover {
+    background-color: rgba(240, 240, 240, 0.7);
+    border-radius: 20px;
+}
+
+.icon {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.feedback-link {
+    font-size: 18px;
+    margin-left: 2%;
+    color: red;
+}
+
+.staff-review-block{
+    padding-top: 8%;
+    align-items:end 
+}
+
+.review-rating-container {
+    margin-right: 10%;
+    /* background-color: aqua; */
+    text-align: left;
+}
+
+.staff-large-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    /* background-color: blue; */
+}
+
+.staff-small-text {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+    color: green;
+}
+
+.review-button {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    font-size: 13px;
+    font-family: var(--font2);
+    cursor: pointer;
+}
+
+.staff-rating{
+    align-self: self-start;
+}

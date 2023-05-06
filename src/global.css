@@ -8,9 +8,15 @@
     src: url('./fonts/Domine/Domine-VariableFont_wght.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Font3';
+    src: url('./fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
 
 
 :root {
     --font1: 'Font1', sans-serif;
     --font2: 'Font2', sans-serif;
+    --font3: 'Font3'
 }

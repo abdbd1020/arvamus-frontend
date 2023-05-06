@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Homepage.css';
 import Navbar from '../Navbar';
 import PageElement from './PageElement';
-import aboutImage from '../Images/logor.png'
+import aboutImage from '../Images/feedback.png'
 
 const Homepage = () => {
   const [activePage, setActivePage] = useState(0);
@@ -23,9 +23,9 @@ const Homepage = () => {
                 <div className={`slide active-slide-${activePage}`}>
                     <PageElement
                         heading = "About"
-                        description = "This is a paragraph text which is for testing"
+                        description = "Arvamus is feedback giving system for educational institutions. Here, the users can give feedbacks such as review, ratings and complaints for the " 
                         src = {aboutImage}
-                    /> 
+                    />
                     </div>
                     <div className={`slide active-slide-${activePage === 3 ? 0 : activePage + 1}`}>
                     <h2>Page 2</h2>

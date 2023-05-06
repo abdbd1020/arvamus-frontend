@@ -1,0 +1,13 @@
+.staff-list {
+    list-style: none;
+    padding: 0;
+}
+  
+.staff-list li {
+    padding: 10px 0;
+}
+
+.staff-page-heading{
+     margin-bottom: 2%;
+     margin-top: 1%;
+}
