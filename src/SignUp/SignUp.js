@@ -3,6 +3,8 @@ import "./SignUp.css";
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
 import Navbar from "../Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const [firstName, setFirstName] = useState("");
@@ -13,7 +15,18 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (event) => {
+  const attributessOfToast = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const errors = validateForm();
     const type = "STUDENT";
@@ -27,15 +40,15 @@ function Signup() {
     });
 
     if (Object.keys(errors).length === 0) {
-      const response = userService.userSignUp(body);
+      const response = await userService.userSignUp(body);
       if (response === null) {
-        alert("Signup failed");
+        toast("Error in signup", attributessOfToast);
       } else {
-        alert("Signup successful");
+        toast("User successfully registered", attributessOfToast);
+
         window.location.href = "./login";
       }
       // submit the form data to the server
-      console.log("Form submitted successfully!");
     } else {
       setErrors(errors);
     }
@@ -71,6 +84,19 @@ function Signup() {
   return (
     <>
       <Navbar />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <div className="signup-container">
         <img src={logoImage} alt="Logo" className="logo-image2" />
         <form className="signup-form" onSubmit={handleSubmit}>
