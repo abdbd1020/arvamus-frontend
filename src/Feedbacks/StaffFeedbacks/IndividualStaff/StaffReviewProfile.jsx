@@ -9,14 +9,14 @@ function StaffReviewProfile(props) {
   const buttontype = props.isbutton;
 
   return (
-    <div className="teacher-profile-container">
-      <div className="teacher-profile-image-container">
-        <img src= {props.src} alt="Round Image" className="teacher-profile-round-image" />
+    <div className="staff-profile-container">
+      <div className="staff-profile-image-container">
+        <img src= {props.src} alt="Round Image" className="staff-profile-round-image" />
       </div>
-      <div className="teacher-profile-text-container">
-        <div className="teacher-profile-text-block">
-          <p className='teacher-profile-name'>{props.teacherName}</p>
-          <p className='teacher-profile-designation'>{props.teacherDesignation}</p>
+      <div className="staff-profile-text-container">
+        <div className="staff-profile-text-block">
+          <p className='staff-profile-name'>{props.staffName}</p>
+          <p className='staff-profile-designation'>{props.staffDesignation}</p>
           <div className="profile-icon-link-container">
             <FaCommentAlt className="profile-link-icon" />
             <p className="profile-feedback-link"><Link style={{color: '#4C3D3D'}} to="/reviewform">Give Review</Link></p>
@@ -27,13 +27,13 @@ function StaffReviewProfile(props) {
           </div>   
         </div>
         <div className='review-rating-container'>
-            <div className="teacher-review-block">
-            <p className="teacher-large-text">Overall Review Impression</p>
-            <div className="teacher-small-text">{props.impression}</div>
+            <div className="staff-review-block">
+            <p className="staff-large-text">Overall Review Impression</p>
+            <div className="staff-small-text">{props.impression}</div>
             </div>
-            <div className="teacher-review-block">
-            <p className="teacher-large-text">Overall rating</p>
-            <StarRating className = 'teacher-rating' rating={props.rating} />
+            <div className="staff-review-block">
+            <p className="staff-large-text">Overall rating</p>
+            <StarRating className = 'staff-rating' rating={props.rating} />
             </div>
         </div>
       </div>
