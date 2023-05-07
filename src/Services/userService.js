@@ -1,6 +1,4 @@
 
-
-
 async function userSignUp(body){
     try{
     const response = await fetch("http://localhost:5000/api/signup", {
@@ -38,11 +36,11 @@ async function userLogin(body){
     } else {
         alert("Login failed!");
         console.log("Login failed!");
-        return null;
+        return 0;
     }}
     catch (error) {
         console.error("Error submitting form:", error);
-        return null;
+        return 0;
     }
 }
 
