@@ -7,9 +7,10 @@
     margin: 0 auto;
     box-sizing: border-box;
     text-align: left;
-    /* border: 1px solid black; */
     margin-bottom: 2%;
-    /* border-radius: 10%; */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
   }
   
   .given-rating-item-top-section {
@@ -21,16 +22,17 @@
   }
   
   .given-rating-item-image-container {
-    width: 50px;
-    height: 50px;
     margin-right: 20px;
-    border-radius: 50%;
-    overflow: hidden;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+    overflow: hidden !important;
   }
   
   .given-rating-item-image {
-    width: 100%;
-    height: auto;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid white
   }
   
   .given-rating-item-text-container {
@@ -42,12 +44,12 @@
   
   .given-rating-name{
     margin: 0;
-    font-size: 15px;
+    font-size: 1.2rem;
   }
 
 .given-rating-date{
     margin: 0;
-    font-size: 12px;
+    font-size: 0.8rem;
     opacity: 0.8;
 }
   

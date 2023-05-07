@@ -25,11 +25,7 @@ const ReceivedFeedbacks = () => {
       <div className='received-container'>
         <div className="received-listii">
           <div className="received-list-container">
-            <div className="received-list-header">
-              <div className="received-heading-wrapper">
-                <h2>Reviews</h2>
-              </div>
-            </div>
+            <h2 className='list-header'>Reviews</h2>
             <ul className="received-list">
               {reviews.map((review, index) => (
                 <li key={index}>
@@ -45,11 +41,7 @@ const ReceivedFeedbacks = () => {
           </div>
           <div className="received-separator"></div>
           <div className="received-list-container">
-            <div className="received-list-header">
-              <div className="received-star-heading-wrapper">
-                <h2>Ratings</h2>
-              </div>
-            </div>
+            <h2 className='list-header'>Retings</h2>
             <ul className="received-list">
               {ratings.map((rating, index) => (
                 <li key={index}>

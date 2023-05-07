@@ -12,47 +12,31 @@ function PersonItem(props) {
   };
   
   return (
-    <div className="person-item-container">
-      <div className="person-item-top-section">
-        <div className="person-item-image-container">
+    <div className="item-container">
+      <div className="item-top-section">
+        <div className="item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="person-item-image"
+            className="item-image"
           />
         </div>
-        <div className="person-item-text-container">
-          <h2 className="person-name">{props.name}</h2>
-          <p className="person-designation">{props.designation}</p>
+        <div className="item-text-container">
+          <h2 className="name">{props.name}</h2>
+          <p className="designation">{props.designation}</p>
           <StarRating rating= {props.rating} />
         </div>
-      </div>
-      <div className='person-item-bottom-section'>
-        <div
-            className="toggle-details"
-            onClick={toggleDetails}
-        >
-            {showDetails ? "Hide Details" : "See Details"}
-        </div>
-        <div 
-            className="details-section"
-            style={{ 
-                display: showDetails ? "block" : "none",
-                height: showDetails ? "auto" : "0",
-                overflow: "hidden",
-                transition: "height 10s" 
-            }}
-        >
+       </div>
+        <div className="person-details-section">
             <div className="person-icon-link-container">
                 <FaCommentAlt className="person-link-icon" />
-                <p className="person-feedback-link"><Link style={{color: '#4C3D3D'}} to="/reviewform">Give Review</Link></p>
+                <Link className='person-feedback-link' style={{color: '#4C3D3D'}} to="/reviewform">Give Review</Link>
             </div>
             <div className="person-icon-link-container">
                 <FaStar className="person-link-icon" />
-                <p className="person-feedback-link"><Link style={{color: '#4C3D3D'}} to="/ratingform">Give Rating</Link></p>
+                <Link className='person-feedback-link' style={{color: '#4C3D3D'}} to="/ratingform">Give Rating</Link>
             </div>    
          </div>
-      </div>
     </div>
   );
 }

@@ -25,11 +25,7 @@ const GivenFeedbacks = () => {
       <div className='given-container'>
         <div className="given-listii">
           <div className="given-list-container">
-            <div className="given-list-header">
-              <div className="given-heading-wrapper">
-                <h2>Reviews</h2>
-              </div>
-            </div>
+            <h2 className="list-header">Reviews</h2>
             <ul className="given-list">
               {reviews.map((review, index) => (
                 <li key={index}>
@@ -46,11 +42,7 @@ const GivenFeedbacks = () => {
           </div>
           <div className="given-separator"></div>
           <div className="given-list-container">
-            <div className="given-list-header">
-              <div className="given-star-heading-wrapper">
-                <h2>Ratings</h2>
-              </div>
-            </div>
+                <h2 className='list-header'>Ratings</h2>
             <ul className="given-list">
               {ratings.map((rating, index) => (
                 <li key={index}>
