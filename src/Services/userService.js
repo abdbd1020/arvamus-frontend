@@ -22,11 +22,8 @@ async function userSignUp(body) {
 
 // user login
 async function userLogin(body) {
-  console.log("body");
-  console.log(body);
-  console.log(typeof body);
-  try {
-    const response = await fetch("http://localhost:5000/api/login", {
+  return new Promise((resolve, reject) => {
+    fetch("http://localhost:5000/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,24 +32,18 @@ async function userLogin(body) {
         Accept: "*/*",
       },
       body: body,
-    });
-
-    // console.log(await response.json());
-
-    if (response.status === 200) {
-      const data = await response.json();
-      if (data !== null) {
-        return data.user;
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-    }
-  } catch (error) {
-    console.error("Error submitting formaaa:", error);
-    return null;
-  }
+    })
+      .then(async (res) => {
+        if (res.status === 200) {
+          resolve(await res.json());
+        } else {
+          reject("Bad gateway");
+        }
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
 }
 
 // update user info
