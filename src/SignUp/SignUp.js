@@ -28,7 +28,7 @@ function Signup() {
     theme: "light",
   };
 
-  const handleSubmit = async (event, props) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const errors = validateForm();
     const type = "STUDENT";
@@ -46,8 +46,9 @@ function Signup() {
       if (response === null) {
         toast("Error in signup", attributessOfToast);
       } else {
+        console.log(response.json());
         toast("User successfully registered", attributessOfToast);
-        navigate("/login", { state: { isSignUp: true } });
+        // navigate("/login", { state: { isSignUp: true } });
       }
       // submit the form data to the server
     } else {

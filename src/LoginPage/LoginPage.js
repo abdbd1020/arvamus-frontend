@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./LoginPage.css"; // import the CSS file
 import backgroundImage from "../Images/finbig.png";
@@ -8,11 +8,28 @@ import Navbar from "../Navbar";
 import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import appService from "../Services/appService";
 
 function LoginPage() {
+  const attributessOfToast = {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  };
   const location = useLocation();
-  const isSignUp = location.state?.isSignUp;
-  console.log(isSignUp);
+  // const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
+
+  // useEffect(() => {
+  //   if (isSignUp) {
+  //     toast("Sign Up Successful please login", attributessOfToast);
+  //     setIsSignUp(false);
+  //   }
+  // }, []);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,18 +44,24 @@ function LoginPage() {
 
   const handleSubmit = async (event) => {
     if (!email || !password) {
-      alert("Please enter your email and password");
+      toast("Please enter all the fields", attributessOfToast);
     }
     const body = JSON.stringify({
       email: email,
       password: password,
     });
-    if (userService.userLogin(body) === 0) {
-      alert("Login failed");
+    const response = await userService.userLogin(body);
+    console.log(response);
+    if (response === null) {
+      console.log("Login failed");
+      alert("Login not Successful");
     } else {
-      window.location.href = "/dashboard";
+      console.log(response);
+
+      alert("Login Successful");
+      // window.location.href = "/dashboard";
     }
-    event.preventDefault();
+    // event.preventDefault();
     // handle login logic here
   };
 
@@ -48,20 +71,19 @@ function LoginPage() {
     <>
       <Navbar />
       {/* <div className="container"> */}
-      {isSignUp && (
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
-      )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       <div className="login-page-container">
         <div className="logo-container">
