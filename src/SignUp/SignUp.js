@@ -5,8 +5,10 @@ import userService from "../Services/userService";
 import Navbar from "../Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +28,7 @@ function Signup() {
     theme: "light",
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, props) => {
     event.preventDefault();
     const errors = validateForm();
     const type = "STUDENT";
@@ -45,8 +47,7 @@ function Signup() {
         toast("Error in signup", attributessOfToast);
       } else {
         toast("User successfully registered", attributessOfToast);
-
-        window.location.href = "./login";
+        navigate("/login", { state: { isSignUp: true } });
       }
       // submit the form data to the server
     } else {
@@ -84,6 +85,8 @@ function Signup() {
   return (
     <>
       <Navbar />
+      {/* <div className="container"> */}
+
       <ToastContainer
         position="top-right"
         autoClose={5000}

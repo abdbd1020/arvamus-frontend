@@ -5,9 +5,15 @@ import backgroundImage from "../Images/finbig.png";
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
 import Navbar from "../Navbar";
+import { useLocation } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function LoginPage() {
-  
+  const location = useLocation();
+  const isSignUp = location.state?.isSignUp;
+  console.log(isSignUp);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,16 +42,27 @@ function LoginPage() {
     // handle login logic here
   };
 
-  function handleForgot(){
-
-  };
-
-  
+  function handleForgot() {}
 
   return (
     <>
       <Navbar />
       {/* <div className="container"> */}
+      {isSignUp && (
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      )}
+
       <div className="login-page-container">
         <div className="logo-container">
           <img src={logoImage} alt="Logo" className="logo-image" />
@@ -78,7 +95,9 @@ function LoginPage() {
               <button type="submit" className="login-submit-button">
                 Login
               </button>
-              <p className="forgot-password" onClick={handleForgot}>Forgot Password?</p>
+              <p className="forgot-password" onClick={handleForgot}>
+                Forgot Password?
+              </p>
             </div>
           </form>
         </div>
