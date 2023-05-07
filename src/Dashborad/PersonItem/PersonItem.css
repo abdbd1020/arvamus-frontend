@@ -1,6 +1,6 @@
-.person-item-container {
+.item-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     max-width: 800px;
@@ -11,50 +11,54 @@
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     overflow: hidden;
+    background-color: #F1F6F9;
+    /* background-color: #B9EDDD; */
   }
   
-  .person-item-top-section {
+  .item-top-section {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 7px;
-    background-color: #333;
-    color: white;
+    /* background-color: #6DA9E4; */
+    /* color: white; */
+    color: black;
   }
   
-  .person-item-image-container {
+  .item-image-container {
     margin-right: 20px;
     margin-left: 1rem;
     margin-top: 0.8rem;
     overflow: hidden !important;
   }
   
-  .person-item-image {
-    width: 7rem;
-    height: 7rem;
+  .item-image {
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     border: 1px solid white;
   }
   
-  .person-item-text-container {
+  .item-text-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-top: 1rem;
   }
 
-  .person-name{
+  .name{
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
-  .person-designation{
-    font-size: 1rem;
+  .designation{
+    font-size: 0.8rem;
     opacity: 0.8;
     margin-bottom: 0.5rem;
   }
 
-  .person-item-bottom-section{
+  .item-bottom-section{
     text-align: left;
     float: left;
     width: 100%;
@@ -78,15 +82,14 @@
     text-decoration: underline;
   }
   
-  .details-section {
+  .person-details-section {
     width: 90%;
     text-align: left;
     margin-left: 3%;
-    margin-bottom: 3%;
-    margin-top: 1%;
+    margin-top: 1.3rem !important;
   }
   
-  .details-content {
+  .person-details-content {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
@@ -107,11 +110,15 @@
     align-items: center;
     transition: background-color 0.3s ease;
     width: 90%;
+    margin-left: 5rem;
+    margin-bottom: 0.5rem;
 }
 
 .person-icon-link-container:hover {
-    background-color: rgba(240, 240, 240, 0.7);
+    background-color: #D4ADFC66;
     border-radius: 20px;
+    width: 60%;
+    padding-left: 0.5rem;
 }
 
 .person-link-icon {
@@ -120,8 +127,8 @@
 }
 
 .person-feedback-link {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-left: 2%;
-    color: red;
+    color: blue !important;  
 }
   

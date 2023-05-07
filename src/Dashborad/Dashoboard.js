@@ -40,7 +40,7 @@ const Dashboard = () => {
           </div>
           <div className="separator"></div>
           <div className="list-container">
-            <h2 className='star-header'>Staffs</h2>
+            <h2 className='list-header'>Staffs</h2>
             <ul className="list">
               {staffs.map((staff, index) => (
                 <li key={index}>
