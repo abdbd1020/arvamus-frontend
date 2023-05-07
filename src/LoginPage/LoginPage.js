@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import appService from "../Services/appService";
+import e from "cors";
 
 function LoginPage() {
   const attributessOfToast = {
@@ -43,6 +44,13 @@ function LoginPage() {
   };
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    // const response = await appService.getAllTeachers();
+    // console.log(response);
+    // alert("Login Successful");
+
     if (!email || !password) {
       toast("Please enter all the fields", attributessOfToast);
     }
@@ -50,18 +58,19 @@ function LoginPage() {
       email: email,
       password: password,
     });
-    const response = await userService.userLogin(body);
-    console.log(response);
-    if (response === null) {
-      console.log("Login failed");
-      alert("Login not Successful");
-    } else {
-      console.log(response);
+    userService.userLogin(body).then((response) => {
+      console.log("response", response);
+      if (response === null) {
+        console.log("Login failed");
+        alert("Login not Successful");
+      } else {
+        console.log(response);
 
-      alert("Login Successful");
-      // window.location.href = "/dashboard";
-    }
-    // event.preventDefault();
+        console.log("Login Successful");
+        // window.location.href = "/dashboard";
+      }
+    });
+
     // handle login logic here
   };
 

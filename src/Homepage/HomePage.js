@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Homepage.css";
 import Navbar from "../Navbar";
 import PageElement from "./PageElement";
 import aboutImage from "../Images/feedback.png";
