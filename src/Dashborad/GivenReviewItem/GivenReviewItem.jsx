@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './ReviewItem.css';
+import './GivenReviewItem.css';
 
-function ReviewItem(props) {
+function GivenReviewItem(props) {
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -9,22 +9,22 @@ function ReviewItem(props) {
   };
   
   return (
-    <div className="review-item-container">
-      <div className="review-item-top-section">
-        <div className="review-item-image-container">
+    <div className="given-review-item-container">
+      <div className="given-review-item-top-section">
+        <div className="given-review-item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="review-item-image"
+            className="given-review-item-image"
           />
         </div>
-        <div className="review-item-text-container">
-          <h2 className="review-impression">{props.impression}</h2>
-          <p className="date">{props.date}</p>
-          {/* <p className="name-show">{props.nameshow}</p> */}
+        <div className="given-review-item-text-container">
+          <p className="given-review-name">{props.name}</p>
+          <h2 className="given-review-impression">{props.impression}</h2>
+          <p className="given-review-date">{props.date}</p>
         </div>
       </div>
-      <div className='review-item-bottom-section'>
+      <div className='given-review-item-bottom-section'>
         <div
             className="toggle-details"
             onClick={toggleDetails}
@@ -47,4 +47,4 @@ function ReviewItem(props) {
   );
 }
 
-export default ReviewItem;
+export default GivenReviewItem;

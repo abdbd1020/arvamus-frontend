@@ -1,7 +1,7 @@
 import React from 'react';
 import './IndividualStaff.css';
 import Sidebar from '../../../Dashborad/Sidebar/Sidebar';
-import Profile from '../../../Dashborad/Profile';
+import Profile from '../../../MyProfile/Profile';
 import profileImage from '../../../Images/prof1.jpg';
 import studentImage from '../../../Images/student4.png'
 // import teacherImage from '../Images/teacher4.png'

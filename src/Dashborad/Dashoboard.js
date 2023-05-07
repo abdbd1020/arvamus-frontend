@@ -1,117 +1,63 @@
 import React from 'react';
 import './Dashboard.css';
-// import profBack from "./Images/profback.jpg"
-// import backgroundImage3 from "./Images/finbig.png";
 import Sidebar from './Sidebar/Sidebar';
-import Profile from './Profile';
+import PersonItem from './PersonItem/PersonItem';
 import profileImage from '../Images/prof1.jpg';
-import studentImage from '../Images/student4.png'
 import teacherImage from '../Images/teacher4.png'
 import staffImage from '../Images/staff4.png'
-import StarRating from './StarRating';
-import ReviewItem from './ReviewItem/ReviewItem';
-import RatingItem from './RatingItem/RatingItem';
 
 const Dashboard = () => {
+  const teachers = [
+    { src: profileImage, designation: 'Lecturer', name: 'Fahim Arefin', rating: 5 },
+    { src: teacherImage, designation: 'Lecturer', name: 'Fahim Arefin', rating: 5 },
+    { src: teacherImage, designation: 'Lecturer', name: 'Fahim Arefin', rating: 5 },
+  ];
+
+  const staffs = [
+    { src: staffImage, designation: 'Cleaner', name: 'MD Shahid', rating: 4 },
+    { src: staffImage, designation: 'Cleaner', name: 'MD Shahid', rating: 4 },
+    { src: staffImage, designation: 'Cleaner', name: 'MD Shahid', rating: 4 },
+  ];
+
   return (
     <Sidebar>
-        <div
-            className='home-page-container'
-            // style={{ backgroundImage: `url(${profBack})` }}
-        >
-            <Profile
-                className = 'homepage-profile'
-                picture= {profileImage}
-                name = "Farhan Mahmud"
-                regno = "mahmud.farhan1903@gmail.com"
-                impression = "Good"
-                rating = {4}
-            />
-
-            <div className="listii">
-                <div className="list-container">
-                    <div class="list-header">
-                        <div class="heading-wrapper">
-                            <h2>Reviews</h2>
-                        </div>
-                    </div>
-                    <ul className="list">
-                    <li>
-                        <ReviewItem
-                            src = {studentImage}
-                            impression = "Positive"
-                            date = "04 Oct, 2022"
-                            // nameshow = "Anonymous"
-                        />
-                    </li>
-                    <li>
-                        <ReviewItem
-                            src = {studentImage}
-                            impression = "Positive"
-                            date = "04 Oct, 2022"
-                            // nameshow = "Anonymous"
-                        />
-                    </li>
-                    <li>
-                        <ReviewItem
-                            src = {studentImage}
-                            impression = "Positive"
-                            date = "04 Oct, 2022"
-                            // nameshow = "Anonymous"
-                        />
-                    </li>
-                    </ul>
-                </div>
-                <div className="separator"></div>
-                <div className="list-container">
-                    <div class="list-header">
-                        <div class="star-heading-wrapper">
-                            <h2>Ratings</h2>
-                        </div>
-                    </div>
-                    <ul className="list">
-                        <div className="star-item">
-                            <RatingItem
-                                src = {studentImage}
-                                rating = {3.5}
-                                date = "04 Oct, 2022"
-                                responsibility = {3.5}
-                                behavior = {3.5}
-                                professionalism = {3.5}
-                                proficiency = {3.5}
-                                management = {3.5}
-                            />
-                        </div>
-                        <div className="star-item">
-                        <RatingItem
-                                src = {studentImage}
-                                rating = {3.5}
-                                date = "04 Oct, 2022"
-                                responsibility = {3.5}
-                                behavior = {3.5}
-                                professionalism = {3.5}
-                                proficiency = {3.5}
-                                management = {3.5}
-                            />
-                        </div>
-                        <div className="star-item">
-                            <RatingItem
-                                src = {studentImage}
-                                rating = {3.5}
-                                date = "04 Oct, 2022"
-                                responsibility = {3.5}
-                                behavior = {3.5}
-                                professionalism = {3.5}
-                                proficiency = {3.5}
-                                management = {3.5}
-                            />
-                        </div>
-                    </ul>
-            </div>
-    </div>
+      <div className='dashboard-container'>
+        <div className="listii">
+          <div className="list-container">
+            <h2 className='list-header'>Teachers</h2>
+            <ul className="list">
+              {teachers.map((teacher, index) => (
+                <li key={index}>
+                  <PersonItem
+                    src={teacher.src}
+                    name={teacher.name}
+                    designation = {teacher.designation}
+                    rating={teacher.rating}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="separator"></div>
+          <div className="list-container">
+            <h2 className='star-header'>Staffs</h2>
+            <ul className="list">
+              {staffs.map((staff, index) => (
+                <li key={index}>
+                  <PersonItem
+                    src={staff.src}
+                    name={staff.name}
+                    designation={staff.designation}
+                    rating={staff.rating}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div>
     </Sidebar>
-    );
+  );
 };
 
 export default Dashboard;

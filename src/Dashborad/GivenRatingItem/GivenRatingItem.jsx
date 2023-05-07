@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import StarRating from "../StarRating";
-import "./RatingItem.css";
+import "./GivenRatingItem.css";
 
-function RatingItem(props) {
+function GivenRatingItem(props) {
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -10,22 +10,23 @@ function RatingItem(props) {
   };
 
   return (
-    <div className="rating-item-container">
-      <div className="rating-item-top-section">
-        <div className="rating-item-image-container">
+    <div className="given-rating-item-container">
+      <div className="given-rating-item-top-section">
+        <div className="given-rating-item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="rating-item-image"
+            className="given-rating-item-image"
           />
         </div>
-        <div className="rating-item-text-container">
+        <div className="given-rating-item-text-container">
+          <p className="given-rating-name">{props.name}</p>
+          <p className="given-rating-date">{props.date}</p>
           <StarRating rating= {props.rating} />
-          <p className="date">{props.date}</p>
           {/* <p className="name-show">{props.nameshow}</p> */}
         </div>
       </div>
-      <div className="rating-item-bottom-section">
+      <div className="given-rating-item-bottom-section">
         <div
             className="toggle-details"
             onClick={toggleDetails}
@@ -33,7 +34,7 @@ function RatingItem(props) {
             {showDetails ? "Hide Details" : "See Details"}
         </div>
         {showDetails && (
-          <div className="rating-item-details-container">
+          <div className="given-rating-item-details-container">
             <div className="details-row">
               <div className="rating-details-text">Responsibility:</div>
               <StarRating rating= {props.responsibility} />
@@ -61,4 +62,4 @@ function RatingItem(props) {
   );
 }
 
-export default RatingItem;
+export default GivenRatingItem;

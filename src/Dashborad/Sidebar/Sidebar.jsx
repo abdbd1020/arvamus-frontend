@@ -10,7 +10,11 @@ import {
     FaChalkboardTeacher,
     FaBuilding,
     FaIndustry,
-    FaUserFriends
+    FaUserFriends,
+    FaArrowAltCircleUp,
+    FaArrowAltCircleDown,
+    FaArrowCircleDown,
+    FaArrowCircleUp
     // FaTh,
     // FaUserAlt,
     // FaRegChartBar,
@@ -36,19 +40,14 @@ const Sidebar = ({children}) => {
             icon:<FaHome/>
         },
         {
-            path:"/infrafeedbacks",
-            name:"Infrastructure Feedbacks",
-            icon:<FaIndustry/>
+            path:"/given",
+            name:"Given Feedbacks",
+            icon:<FaArrowCircleUp/>
         },
         {
-            path:"/teacherfeedbacks",
-            name:"Teacher Feedbacks",
-            icon:<FaChalkboardTeacher/>
-        },
-        {
-            path:"/staffeedbacks",
-            name:"Staff Feedbacks",
-            icon:<FaUserFriends/>
+            path:"/received",
+            name:"Received Feedbacks",
+            icon:<FaArrowAltCircleDown/>
         },
         {
             path:"/settings",
@@ -61,7 +60,7 @@ const Sidebar = ({children}) => {
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
                    <div>
-                        {showImage && <img className='logo-image' src={logoImage} alt="Image" />}
+                        {showImage && <img className='sidebar-logo-image' src={logoImage} alt="Image" />}
                     </div>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>

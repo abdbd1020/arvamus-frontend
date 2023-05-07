@@ -1,18 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Homepage from "./Homepage/Homepage";
+import Homepage from "./Homepage/Homepage"
 import LoginPage from "./LoginPage/LoginPage";
 import Signup from "./SignUp/SignUp";
 import Dashboard from "./Dashborad/Dashoboard";
 import Settings from "./Settings/Settings"
-import IndividualReview from "./Feedbacks/TeacherFeedbacks/Individual Reviews/IndividualReview";
-import TeacherFeedbacks from "./Feedbacks/TeacherFeedbacks/TeacherFeedbacks";
-import InfrastructureFeedbacks from "./Feedbacks/InfrastructureFeedbacks/InsfrastructureFeedbacks";
-import StaffFeedbacks from "./Feedbacks/StaffFeedbacks/StaffFeedbacks";
 import ReviewForm from "./Feedbacks/FeedbackForms/ReviewForm/ReviewForm";
 import RatingSelect from "./Feedbacks/FeedbackForms/RatingForm/RatingSelect";
 import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
-import IndividualStaff from "./Feedbacks/StaffFeedbacks/IndividualStaff/IndividualStaff";
+import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
+import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
 // import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 // import { Navbar } from "./Navbar";
@@ -37,12 +34,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/teacherfeedbacks" element={<TeacherFeedbacks />}/>
-          <Route path="/infrafeedbacks" element={<InfrastructureFeedbacks />}/>
-          <Route path="/teacherfeedbacks" element={<StaffFeedbacks />}/>
-          <Route path="/staffeedbacks" element={<InfrastructureFeedbacks />}/>
-          <Route path="/indteacherev" element={<IndividualReview />}/>
-          <Route path="/indstaffrev" element={<IndividualStaff />}/>
+          <Route path="/received" element={<ReceivedFeedbacks />}/>
+          <Route path="/given" element={<GivenFeedbacks />}/>
           <Route path="/reviewform" element={<ReviewForm />}/>
           <Route path="/ratingform" element={<RatingForm />}/>
           <Route path="/test" element={<RatingSelect />}/>

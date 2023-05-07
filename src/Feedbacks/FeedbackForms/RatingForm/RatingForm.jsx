@@ -4,7 +4,7 @@ import RatingSelect from './RatingSelect';
 
 function RatingForm() {
 
-const containerHeadings = ['Responsibility', 'Behaviour', 'Professionalism', 'Proficiency', 'Management'];
+const containerHeadings = ['Responsibility', 'Behaviour', 'Professionalism', 'Proficiency', 'Management', 'Overall'];
   
 const [ratings, setRatings] = useState(Array(6).fill(0));
 
@@ -32,7 +32,7 @@ const [ratings, setRatings] = useState(Array(6).fill(0));
             <RatingSelect onRatingChange={(rating) => handleRatingChange(index, rating)} />
           </div>
         ))}
-        <button type="submit">Submit</button>
+        <button className='rating-button' type="submit">Submit Rating</button>
       </form>
     </div>
   );

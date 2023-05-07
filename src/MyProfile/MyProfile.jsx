@@ -1,30 +1,30 @@
 import React from 'react';
-import './IndividualReview.css';
+import './Dashboard.css';
 // import profBack from "./Images/profback.jpg"
 // import backgroundImage3 from "./Images/finbig.png";
-import Sidebar from '../../../Dashborad/Sidebar/Sidebar';
-import Profile from '../../../MyProfile/Profile';
-import profileImage from '../../../Images/prof1.jpg';
-import studentImage from '../../../Images/student4.png'
-// import teacherImage from '../Images/teacher4.png'
-// import staffImage from '../Images/staff4.png'
-// import StarRating from './StarRating';
-import ReviewItem from '../../../Dashborad/ReviewItem/ReviewItem';
-import RatingItem from '../../../Dashborad/RatingItem/RatingItem';
-import TeacherReviewProfile from './TeacherReviewProfile';
+import Sidebar from '../Dashborad/Sidebar/Sidebar';
+import Profile from './Profile';
+import profileImage from '../Images/prof1.jpg';
+import studentImage from '../Images/student4.png'
+import teacherImage from '../Images/teacher4.png'
+import staffImage from '../Images/staff4.png'
+import StarRating from './StarRating';
+import ReviewItem from '../Dashborad/ReviewItem/ReviewItem';
+import RatingItem from '../Dashborad/RatingItem/RatingItem';
 
-const IndividualReview = () => {
+const Dashboard = () => {
   return (
     <Sidebar>
         <div
             className='home-page-container'
             // style={{ backgroundImage: `url(${profBack})` }}
         >
-            <TeacherReviewProfile
-                src = {profileImage}
-                teacherName = "Farhan Mahmud"
-                teacherDesignation = "Professor"
-                impression = "Positive"
+            <Profile
+                className = 'homepage-profile'
+                picture= {profileImage}
+                name = "Farhan Mahmud"
+                regno = "mahmud.farhan1903@gmail.com"
+                impression = "Good"
                 rating = {4}
             />
 
@@ -114,4 +114,4 @@ const IndividualReview = () => {
     );
 };
 
-export default IndividualReview;
+export default Dashboard;

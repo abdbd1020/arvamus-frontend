@@ -1,15 +1,16 @@
-.rating-giving-container{
-}
+/* .rating-giving-container{
+} */
 
 .rating-form-heading {
     margin-top: 5%;
+    font-size: xx-large;
 }
   
 
 
 .rating-form-container {
-    margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 2%;
+    background-color: #F1F6F9;
     border-width: 3px;
     border-style: solid;
     border: #E5E7E9;
@@ -24,39 +25,35 @@
   }
 
   .rating-giving-section{
-    margin-top: 5%;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    margin-top: 3%;
   }
   
   h2 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 3%;
   }
   
   form {
-    width: 400px;
+    width: 40%
   }
   
-  button {
-    margin-top: 20px;
+  .rating-button {
+    margin-top: 30px !important;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
     color: #fff;
     border: none;
+    width: 80%;
+    margin-left: 10%;
     border-radius: 4px;
     cursor: pointer;
   }
   
-  button:hover {
+  .rating-button:hover {
     background-color: #0056b3;
   }
   
-  button:disabled {
+  .rating-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }

@@ -1,0 +1,127 @@
+.person-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+  }
+  
+  .person-item-top-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 7px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .person-item-image-container {
+    margin-right: 20px;
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+    overflow: hidden !important;
+  }
+  
+  .person-item-image {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+  
+  .person-item-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .person-name{
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .person-designation{
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .person-item-bottom-section{
+    text-align: left;
+    float: left;
+    width: 100%;
+    margin: 0px;
+    background-color: white;
+  }
+
+  .toggle-details {
+    color: blue;
+    border: none;
+    cursor: pointer;
+    font-size: 95%;
+    margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .toggle-details:hover {
+    /* background-color: #ccc; */
+    text-decoration: underline;
+  }
+  
+  .details-section {
+    width: 90%;
+    text-align: left;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+  }
+  
+  .details-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: blue;
+  }
+  
+  .details-content p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .show-details .details-content {
+    height: auto;
+  }
+
+.person-icon-link-container {
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 90%;
+}
+
+.person-icon-link-container:hover {
+    background-color: rgba(240, 240, 240, 0.7);
+    border-radius: 20px;
+}
+
+.person-link-icon {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.person-feedback-link {
+    font-size: 18px;
+    margin-left: 2%;
+    color: red;
+}
+  

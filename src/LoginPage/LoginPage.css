@@ -24,20 +24,21 @@ body {
   }
 
   .logo-image{
-    width: 100px;
+    width: 40%;
     margin-bottom: 0px;
   }
 
   .website-name{
     color: black;
-    font-family: var(--font2);
+    font-family: var(--font3);
+    font-size: xx-large;
     font-weight: bolder;
     font-style: italic;
   }
   
   /* apply styles to the login box */
   .login-box {
-    margin-top: 30px;
+    margin-top: 1%;
     background-color: rgba(255, 255, 255, 0.7);
     border-width: 3px;
     border-style: solid;
@@ -45,70 +46,69 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 26%;
-    height: 50%;
     border-radius: 2%;
+  }
+
+  .form-header{
+     font-size: x-large;
+     margin-bottom: 8%;
   }
   
   /* apply styles to the form elements */
   .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-bottom: 1.5rem !important;
   }
   
-  .form-input {
-    width: 100%;
-    max-width: 350px; /* add a max-width to restrict the width */
+  .login-form-input {
+    width: 22rem; 
     padding: 10px;
     border: 2px solid #E5E7E9;
     border-radius: 20px;
     font-size: 16px;
     align-items: center;
     color: black;
-    font-family: var(--font2);
+    font-family: var(--font3);
     background-color: #E5E7E9;
   }
 
-  ::-webkit-form-input-placeholder { /* WebKit browsers */
-    font-weight: bold;
-    opacity: 0.5;
-  }
-
   .last-line{
+    width: 25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     /* color: skyblue; */
   }
 
   .forgot-password{
-    margin: 0px;
+    margin-top: 0.5rem;
     color: red;
     font-family: var(--font2);
-    font-size: larger;
+    font-size: large;
     font-weight: bold;
     margin-right: auto;
-  }
-
-  .signup-link{
-    margin: 0px ;
-    color: black;
-    font-family: var(--font2);
-    font-size: larger;
-    font-weight: bold;
-    margin-left: auto;
+    cursor: pointer;
   }
   
-  .submit-button {
+  .forgot-password:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1px;
+    text-decoration: underline;
+  }
+  
+  .login-submit-button {
     width: 50%;
-    padding: 10px;
     border: none;
+    
+    margin-top: 0% !important;
+    padding: 8px;
+    margin-right: 7%;
     border-radius: 0px;
     align-items: center;
-    margin-top: 10px;
-    background-color: red;
     color: white;
     font-size: 20px;
     font-family: var(--font2);
