@@ -1,6 +1,6 @@
 import React from 'react';
 import StaffElement from './StaffElement';
-import Sidebar from '../../Dashborad/Sidebar/Sidebar';
+import Sidebar from '../../General/Sidebar/Sidebar';
 import './StaffFeedbacks.css'
 import prof1 from "../../Images/prof1.jpg"
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StarRating from "../StarRating";
+import StarRating from "../../General/StarRating";
 import "./RatingItem.css";
 
 function RatingItem(props) {
@@ -10,16 +10,16 @@ function RatingItem(props) {
   };
 
   return (
-    <div className="rating-item-container">
-      <div className="rating-item-top-section">
-        <div className="rating-item-image-container">
+    <div className="feedback-item-container">
+      <div className="item-top-section">
+        <div className="item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="rating-item-image"
+            className="item-image"
           />
         </div>
-        <div className="rating-item-text-container">
+        <div className="item-text-container">
           <StarRating rating= {props.rating} />
           <p className="date">{props.date}</p>
           {/* <p className="name-show">{props.nameshow}</p> */}

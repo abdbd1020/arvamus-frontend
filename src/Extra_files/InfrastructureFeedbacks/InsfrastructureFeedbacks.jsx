@@ -1,6 +1,6 @@
 import React from 'react';
 import TeacherElement from '../TeacherFeedbacks/TeacherElement';
-import Sidebar from '../../Dashborad/Sidebar/Sidebar';
+import Sidebar from '../../General/Sidebar/Sidebar';
 import './InfrastructureFeedbacks.css'
 import prof1 from "../../Images/prof1.jpg"
 

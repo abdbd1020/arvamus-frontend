@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "../General/Sidebar/Sidebar";
 import PersonItem from "./PersonItem/PersonItem";
 import profileImage from "../Images/prof1.jpg";
 import teacherImage from "../Images/teacher4.png";
@@ -125,7 +125,7 @@ const Dashboard = () => {
           <div className="list-container">
             <h2 className="list-header">Teachers</h2>
             <ul className="list">
-              {teachers.map((teacher, index) => (
+              {tteachers.map((teacher, index) => (
                 <li key={index}>
                   <PersonItem
                     src={teacher.src}

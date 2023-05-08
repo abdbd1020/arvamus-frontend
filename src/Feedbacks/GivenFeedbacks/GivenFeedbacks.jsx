@@ -1,11 +1,11 @@
 import React from 'react';
 import './GivenFeedbacks.css';
-import Sidebar from '../../Dashborad/Sidebar/Sidebar';
+import Sidebar from '../../General/Sidebar/Sidebar';
 import profileImage from '../../Images/prof1.jpg';
 import teacherImage from '../../Images/teacher4.png';
 import staffImage from '../../Images/staff4.png'
-import GivenRatingItem from '../../Dashborad/GivenRatingItem/GivenRatingItem';
-import GivenReviewItem from '../../Dashborad/GivenReviewItem/GivenReviewItem';
+import GivenRatingItem from '../GivenRatingItem/GivenRatingItem';
+import GivenReviewItem from '../GivenReviewItem/GivenReviewItem';
 
 const GivenFeedbacks = () => {
   const reviews = [

@@ -82,6 +82,18 @@
   margin-top: 0.5rem;
 }
 
+.radio-options-container {
+  display: flex;
+}
+
+.radio-options-container label {
+  margin-right: 1rem;
+}
+
+.radio-options-container input[type="radio"] {
+  margin-right: 0.3rem;
+}
+
 button[type="submit"] {
   margin-top: 1rem;
   padding: 0.5rem 1rem;

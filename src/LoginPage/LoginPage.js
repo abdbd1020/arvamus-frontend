@@ -3,7 +3,8 @@ import "./LoginPage.css"; // import the CSS file
 
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
-import Navbar from "../Navbar";
+import Navbar from "../General/Navbar";
+import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +44,6 @@ function LoginPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     event.stopPropagation();
-
 
     if (!email || !password) {
       toast("Please enter all the fields", attributessOfToast);
