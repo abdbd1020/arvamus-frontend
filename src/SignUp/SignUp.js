@@ -48,7 +48,7 @@ function Signup() {
       } else {
         console.log(response.json());
         toast("User successfully registered", attributessOfToast);
-        // navigate("/login", { state: { isSignUp: true } });
+        navigate("/login", { state: { isSignUp: true } });
       }
       // submit the form data to the server
     } else {
