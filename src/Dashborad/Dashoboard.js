@@ -10,9 +10,9 @@ import { useLocation } from "react-router-dom";
 import { getAllTeachers, getAllStaff } from "../Services/appService";
 
 const Dashboard = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const [userId, setUserId] = useState(location.state?.userId);
+  // const [userId, setUserId] = useState(location.state?.userId);
 
   const tteachers = [
     {
@@ -40,6 +40,7 @@ const Dashboard = () => {
     { src: staffImage, designation: "Cleaner", name: "MD Shahid", rating: 4 },
     { src: staffImage, designation: "Cleaner", name: "MD Shahid", rating: 4 },
   ];
+
   const [teachers, setTeachers] = useState([]);
   const [staffs, setStaffs] = useState([]);
   useEffect(() => {
@@ -49,72 +50,24 @@ const Dashboard = () => {
           console.log("Error");
           return;
         } else {
-          // const newTeachers = data.response.map((element) => {
-          //   return {
-          //     src: teacherImage,
-          //     designation: "Lecturer",
-          //     name: element.first_name + " " + element.last_name,
-          //     rating: 5,
-          //   };
-          // });
-
-          setTeachers([
-            {
-              src: teacherImage,
-              designation: "Lecturer",
-              name:
-                data.response[0].first_name + " " + data.response[0].last_name,
-              rating: 5,
-            },
-          ]);
+          setTeachers(data.response);
         }
       });
     }
-
     fetchTeachers();
   }, []);
 
   useEffect(() => {
-    // async function fetchTeachers() {
-    //   getAllTeachers().then((data) => {
-    //     if (data.status == false) {
-    //       console.log("Error");
-    //       return;
-    //     } else {
-    //       for (const element of data.response) {
-    //         const newElement = {
-    //           src: teacherImage,
-    //           designation: "Lecturer",
-    //           name: element.first_name + " " + element.last_name,
-    //           rating: 5,
-    //         };
-
-    //         teachers.push(newElement);
-    //       }
-    //       console.log(teachers);
-    //     }
-    //   });
-    // }
-
     async function fetchStaffs() {
-      const data = await getAllStaff();
-      if (data.status == false) {
-        console.log("Error");
-        return;
-      } else {
-        data.response.forEach((element) => {
-          const newElement = {
-            src: staffImage,
-            designation: "Stuff",
-            name: element.first_name + " " + element.last_name,
-            rating: 5,
-          };
-          staffs.push(newElement);
-        });
-      }
+      getAllStaff().then((data) => {
+        if (data.status == false) {
+          console.log("Error");
+          return;
+        } else {
+          setStaffs(data.response);
+        }
+      });
     }
-
-    // fetchTeachers();
     fetchStaffs();
   }, []);
 
@@ -125,13 +78,13 @@ const Dashboard = () => {
           <div className="list-container">
             <h2 className="list-header">Teachers</h2>
             <ul className="list">
-              {tteachers.map((teacher, index) => (
+              {teachers.map((teacher, index) => (
                 <li key={index}>
                   <PersonItem
-                    src={teacher.src}
-                    name={teacher.name}
-                    designation={teacher.designation}
-                    rating={teacher.rating}
+                    src={teacherImage}
+                    name={teacher.firstname + " " + teacher.lastname}
+                    designation="Lecturer"
+                    rating={5}
                   />
                 </li>
               ))}
@@ -141,13 +94,13 @@ const Dashboard = () => {
           <div className="list-container">
             <h2 className="list-header">Staffs</h2>
             <ul className="list">
-              {sstaffs.map((staff, index) => (
+              {staffs.map((staff, index) => (
                 <li key={index}>
                   <PersonItem
-                    src={staff.src}
-                    name={staff.name}
-                    designation={staff.designation}
-                    rating={staff.rating}
+                    src={staffImage}
+                    name={staff.firstname + " " + staff.lastname}
+                    designation="Cleaner"
+                    rating={4}
                   />
                 </li>
               ))}
