@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./LoginPage.css"; // import the CSS file
-import backgroundImage from "../Images/finbig.png";
+
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
 import Navbar from "../Navbar";
 import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import appService from "../Services/appService";
-import e from "cors";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   const attributessOfToast = {
     position: "top-right",
-    autoClose: 5000,
+    autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -22,7 +21,7 @@ function LoginPage() {
     progress: undefined,
     theme: "light",
   };
-  const location = useLocation();
+  const navigate = useNavigate();
   // const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
 
   // useEffect(() => {
@@ -59,14 +58,14 @@ function LoginPage() {
       password: password,
     });
     userService.userLogin(body).then((response) => {
-      console.log("response", response);
-      if (response === null) {
+      if (response.status != true) {
         console.log("Login failed");
-        alert("Login not Successful");
+        toast("Login failed", attributessOfToast);
+        return;
       } else {
-        console.log(response);
+        saveDataToLocalStorage(response);
+        navigate("/dashboard", { state: { userId: response.user.userid } });
 
-        console.log("Login Successful");
         // window.location.href = "/dashboard";
       }
     });
@@ -75,6 +74,12 @@ function LoginPage() {
   };
 
   function handleForgot() {}
+
+  function saveDataToLocalStorage(response) {
+    localStorage.setItem("userId", response.user.userid);
+    localStorage.setItem("userType", response.user.type);
+    localStorage.setItem("userPrivateKey", response.user.privatekey);
+  }
 
   return (
     <>
