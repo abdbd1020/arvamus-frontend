@@ -1,117 +1,195 @@
-body{
-    margin: 0px;
+body {
+	background: #1d1c2d;
+	font-family: "Mulish", sans-serif;
 }
 
-.received-container{
-    margin: 0%;
-    display: flex;
-    flex-direction: column;
+.review-feedback-main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
 }
 
-*{
-    margin:0;
-    padding:0;
-    text-decoration: none;
+.review-feedback-main .card {
+	width: 100%;
+	height: 100%;
+	background: #222033;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 30px;
 }
 
-.container{
-    display:flex;
+.review-feedback-main .card .title {
+	color: #ffffff;
+	font-size: 22px;
+	margin-left: 35px;
 }
 
-main{
-    width: 100%;
-    padding: 20px;
+.review-feedback-main .card .search-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.labels {
-  display: flex;
-  flex-direction: column;
+.review-feedback-main .card .search-wrapper img {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	left: 50px;
+	color: #8c8aa7;
 }
 
-label {
-  font-size: 25px;
-  font-weight: bolder;
-  margin-bottom: 5px;
+.review-feedback-main .card .search-wrapper input[type=text] {
+	width: 450px;
+	height: 70px;
+	background: #262538;
+	border: 1px solid #49485d;
+	border-radius: 10px;
+	margin: 18px 0px;
+	box-sizing: border-box;
+	padding-left: 55px;
+	font-size: 18px;
+	color: #8c8aa7;
+	cursor: text;
 }
 
-.received-listii {
-    display: flex;
-    width: 100%;
-    margin-left: 2%;
-}
-  
-.received-list-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-right: 20%;
+.review-feedback-main .card .search-wrapper input[type=text]:focus {
+	outline: none !important;
 }
 
-.received-star-heading-wrapper {
-  margin-left: 12%;
+.review-feedback-main .card .tags-wrapper {
+	max-height: 130px;
+	margin: 35px;
 }
 
-.received-separator {
-  width: 0.1vw;
-  height: 100vh;
-  /* background-color: lightgray;  */
-  /* box-shadow: 0 0 2px black; */
+.review-feedback-main .card .tags-wrapper .tags-header {
+	color: #ffffff;
+	font-size: 22px;
+	margin-bottom: 14px;
 }
 
-.received-list {
-  list-style: none;
-  margin-top: 20px;
-  padding: 0;
-  width: 50%;
-  justify-content: center;
+.review-feedback-main .card .tags-wrapper .tags-container .tag {
+	display: inline-flex;
+	background: #1d1c2d;
+	color: #8c8aa7;
+	border-radius: 5px;
+	padding: 12px;
+	margin: 10px 3px;
+	cursor: pointer;
 }
 
-.received-list li {
-  /* padding: 7px; */
-  /* margin-top: 1px; */
-  width: 300%;
-  /* background-color: #000; */
-  margin: auto;
-  /* border: 2px solid red; */
-  /* border-radius: 10px; */
+.review-feedback-main .card .tags-wrapper .tags-container .selected {
+	background: #8780f8;
+	color: #ffffff;
 }
 
-.list-item {
-  border: 2px solid black;
-  /* padding: 10px; */
-  /* margin-bottom: 10px; */
-  /* margin: 0px !important; */
-  margin-bottom: 15px;
-  padding: 0px;
-  word-wrap: break-word;
-  overflow: hidden;
-  /* height: 100px; */
-  min-height: 50px;
-  overflow-y: auto;
-  text-align: left;
-  border-radius: 10px;
-  background-color: #E5E7E9;
-    /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
-  /* max-width: 400px;  */
+.review-feedback-main .card .reviews-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
 }
 
-.star-item {
-  border: 1px solid black;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 10px;
-  margin-left: 20%;
-  width: 270%;
-  /* height: 100px; */
-  min-height: 50px;
-  overflow-y: auto;
-  border-radius: 10px;
-  background-color: white;
-    /* display: flex;
-  flex-direction: column;
-  align-items: flex-start; */
-  /* max-width: 400px;  */
+.review-feedback-main .card .reviews-list .review-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 450px;
+	height: 250px;
+	background: #2c2b3f;
+	border-radius: 10px;
+	padding: 10px;
 }
-  
+
+.review-feedback-main .card .reviews-list .review-card .review-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .name-group {
+	display: flex;
+	align-items: center;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .name-group .info {
+	display: flex;
+	flex-direction: column;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .name-group .name {
+	text-align: left;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .name-group .designation {
+	margin: 0;
+	font-size: .8rem;
+	font-weight: 300;
+	color: #8c8aa7;
+	text-align: left;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .name-group .initials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	margin-right: 12px;
+	border-radius: 50%;
+	background: #d56a6a;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-header .rating i {
+	color: #f3d779;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-description {
+	color: #ffffff;
+	font-weight: 400;
+	margin: 0px 45px;
+	text-align: start;
+	/* maximum line is 3 */
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-details {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 45px;
+	align-items: center;
+	color: #8c8aa7;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-details .share-group {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border: 1px solid #79f39d;
+	border-radius: 5px;
+	cursor: pointer;
+	background: unset;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-details .share-group i {
+	margin-right: 10px;
+	color: #8c8aa7;
+}
+
+.review-feedback-main .card .reviews-list .review-card .review-details .share-group>span {
+	background: unset;
+	border: unset;
+	color: #8c8aa7;
+}
