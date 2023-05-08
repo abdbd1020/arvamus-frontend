@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../General/Navbar";
 import PageElement from "./PageElement";
 import aboutImage from "../Images/feedback.png";
-import './Homepage.css'
+import "lala";
 
 const HomePage = () => {
   const [activePage, setActivePage] = useState(0);
@@ -30,24 +30,21 @@ const HomePage = () => {
           <div
             className={`slide active-slide-${
               activePage === 3 ? 0 : activePage + 1
-            }`}
-          >
+            }`}>
             <h2>Page 2</h2>
             <p>Content for page 2 goes here.</p>
           </div>
           <div
             className={`slide active-slide-${
               activePage === 3 ? 1 : activePage + 2
-            }`}
-          >
+            }`}>
             <h2>Page 3</h2>
             <p>Content for page 3 goes here.</p>
           </div>
           <div
             className={`slide active-slide-${
               activePage === 3 ? 2 : activePage + 3
-            }`}
-          >
+            }`}>
             <h2>Page 4</h2>
             <p>Content for page 4 goes here.</p>
           </div>
