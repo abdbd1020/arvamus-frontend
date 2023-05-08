@@ -1,11 +1,11 @@
 import React from 'react';
 import './ReceivedFeedbacks.css';
-import Sidebar from '../../Dashborad/Sidebar/Sidebar';
+import Sidebar from '../../General/Sidebar/Sidebar';
 import profileImage from '../../Images/prof1.jpg';
 import teacherImage from '../../Images/teacher4.png';
 import staffImage from '../../Images/staff4.png'
-import ReviewItem from '../../Dashborad/ReviewItem/ReviewItem'
-import RatingItem from '../../Dashborad/RatingItem/RatingItem'
+import ReviewItem from '../ReviewItem/ReviewItem'
+import RatingItem from '../RatingItem/RatingItem'
 
 const ReceivedFeedbacks = () => {
   const reviews = [
@@ -41,7 +41,7 @@ const ReceivedFeedbacks = () => {
           </div>
           <div className="received-separator"></div>
           <div className="received-list-container">
-            <h2 className='list-header'>Retings</h2>
+            <h2 className='list-header'>Ratings</h2>
             <ul className="received-list">
               {ratings.map((rating, index) => (
                 <li key={index}>

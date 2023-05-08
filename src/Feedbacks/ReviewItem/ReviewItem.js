@@ -9,19 +9,18 @@ function ReviewItem(props) {
   };
   
   return (
-    <div className="review-item-container">
-      <div className="review-item-top-section">
-        <div className="review-item-image-container">
+    <div className="feedback-item-container">
+      <div className="item-top-section">
+        <div className="item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="review-item-image"
+            className="item-image"
           />
         </div>
-        <div className="review-item-text-container">
-          <h2 className="review-impression">{props.impression}</h2>
+        <div className="item-text-container">
+          <h2 className="impression">{props.impression}</h2>
           <p className="date">{props.date}</p>
-          {/* <p className="name-show">{props.nameshow}</p> */}
         </div>
       </div>
       <div className='review-item-bottom-section'>

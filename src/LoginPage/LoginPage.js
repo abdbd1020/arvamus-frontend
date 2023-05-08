@@ -4,7 +4,7 @@ import "./LoginPage.css"; // import the CSS file
 
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
-import Navbar from "../Navbar";
+import Navbar from "../General/Navbar";
 import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

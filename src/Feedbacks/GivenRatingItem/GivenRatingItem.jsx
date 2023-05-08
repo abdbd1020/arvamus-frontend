@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StarRating from "../StarRating";
+import StarRating from '../../General/StarRating'
 import "./GivenRatingItem.css";
 
 function GivenRatingItem(props) {
@@ -10,23 +10,23 @@ function GivenRatingItem(props) {
   };
 
   return (
-    <div className="given-rating-item-container">
-      <div className="given-rating-item-top-section">
-        <div className="given-rating-item-image-container">
+    <div className="feedback-item-container">
+      <div className="item-top-section">
+        <div className="item-image-container">
           <img
             src= {props.src}
             alt="Profile"
-            className="given-rating-item-image"
+            className="item-image"
           />
         </div>
-        <div className="given-rating-item-text-container">
-          <p className="given-rating-name">{props.name}</p>
-          <p className="given-rating-date">{props.date}</p>
+        <div className="item-text-container">
+          <p className="name">{props.name}</p>
+          <p className="date">{props.date}</p>
           <StarRating rating= {props.rating} />
           {/* <p className="name-show">{props.nameshow}</p> */}
         </div>
       </div>
-      <div className="given-rating-item-bottom-section">
+      <div className="rating-item-bottom-section">
         <div
             className="toggle-details"
             onClick={toggleDetails}
@@ -34,7 +34,7 @@ function GivenRatingItem(props) {
             {showDetails ? "Hide Details" : "See Details"}
         </div>
         {showDetails && (
-          <div className="given-rating-item-details-container">
+          <div className="rating-item-details-container">
             <div className="details-row">
               <div className="rating-details-text">Responsibility:</div>
               <StarRating rating= {props.responsibility} />

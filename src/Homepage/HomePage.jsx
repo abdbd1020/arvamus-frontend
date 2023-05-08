@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
+import Navbar from "../General/Navbar";
 import PageElement from "./PageElement";
 import aboutImage from "../Images/feedback.png";
+import './Homepage.css'
 
 const HomePage = () => {
   const [activePage, setActivePage] = useState(0);

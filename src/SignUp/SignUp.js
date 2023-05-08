@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
-import Navbar from "../Navbar";
+import Navbar from "../General/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
@@ -205,6 +205,23 @@ function Signup() {
               )}
             </div>
           </div>
+        <div className="signup-radio-section">
+          <h2 className='radio-heading'>Impression</h2>
+          <div className="radio-options">
+            <div className='specific-option'>
+              <input className='ind-option'  type="radio" id="option1" name="options1" value="option1" />
+              <label className='ind-label' style={{color: 'green'}} htmlFor="option1">Positive</label>
+            </div>
+            <div className='specific-option'>
+              <input className='ind-option' type="radio" id="option2" name="options1" value="option2" />
+              <label className='ind-label'  style={{opacity: '0.7'}}  htmlFor="option2">Neutral</label>
+            </div>
+            <div className='specific-option'>
+              <input className='ind-option' type="radio" id="option3" name="options1" value="option3" />
+              <label className='ind-label' style={{color: 'red'}} htmlFor="option3">Negative</label>
+            </div>
+          </div>
+        </div>
           <button type="submit" className="signup-button">
             Sign Up
           </button>

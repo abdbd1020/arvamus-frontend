@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './PersonItem.css';
-import StarRating from '../StarRating';
+import StarRating from '../../General/StarRating';
 import { Link } from "react-router-dom";
 import {FaStar, FaCommentAlt} from 'react-icons/fa';
 
