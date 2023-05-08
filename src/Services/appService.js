@@ -8,7 +8,6 @@ async function getAllTeachers() {
         "Accept-Encoding": "gzip, deflate, br",
         Accept: "*/*",
       },
-      body: body,
     })
       .then(async (res) => {
         if (res.status === 200) {
@@ -23,9 +22,9 @@ async function getAllTeachers() {
   });
 }
 
-async function getAllStuff() {
+async function getAllStaff() {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/get_all_stuff", {
+    fetch("http://localhost:5000/api/get_all_staff", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +32,6 @@ async function getAllStuff() {
         "Accept-Encoding": "gzip, deflate, br",
         Accept: "*/*",
       },
-      body: body,
     })
       .then(async (res) => {
         if (res.status === 200) {
@@ -50,5 +48,5 @@ async function getAllStuff() {
 
 module.exports = {
   getAllTeachers,
-  getAllStuff,
+  getAllStaff,
 };
