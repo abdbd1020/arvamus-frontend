@@ -2,7 +2,9 @@ import React from "react";
 import { Rating } from "./Rating";
 
 export function ReviewDetailsPopUP(props) {
-  let {
+  const { currentReviewLoaded = {}, onButtonClick = () => {} } = props;
+
+  const {
     name = "Alice Banks",
     designation = "Lecturer, ICT Department",
     rating = 3,
@@ -16,9 +18,9 @@ export function ReviewDetailsPopUP(props) {
       { title: "Value for Money", rating: 4 },
       { title: "Performance", rating: 4 },
     ],
-    onButtonClick = () => {},
-  } = props;
-  rating = rating > 5 ? 5 : rating;
+  } = currentReviewLoaded;
+
+  // rating = rating > 5 ? 5 : rating;
 
   return (
     <>
@@ -26,8 +28,12 @@ export function ReviewDetailsPopUP(props) {
         className="review-details-popIn-overlay"
         onClick={onButtonClick}></div>
       <div className="review-details-popIn">
-        <button className="close-btn" onClick={onButtonClick}>
-          ❌
+        <button
+          type="close"
+          aria-label="close Button"
+          className="close-btn"
+          onClick={onButtonClick}>
+          <i class="fa fa-times" aria-hidden="true"></i>
         </button>
         <div className="review-details-popIn-header">
           <div className="main-information">
@@ -35,14 +41,24 @@ export function ReviewDetailsPopUP(props) {
             <p className="info">
               <span className="name">{name}</span>
               <span className="designation">{designation}</span>
+              <span className="review-date">{reviewDate}</span>
             </p>
           </div>
-          <div className="rating-wrapper">
-            <span className="rating-title">Average Rating</span>
-            {<Rating rating={rating} />}
+
+          <div className="review-description">
+            <h3 className="review-description-title">Review</h3>
+            <p className="review-description-details">{reviewDescription}</p>
           </div>
+          <div className="review-details"></div>
         </div>
         <div className="details-rating">
+          <div className="rating-wrapper">
+            <span className="rating-title">Average Rating</span>
+            <div className="rating-inner-wrapper">
+              <span className="rating-text">{rating}</span>
+              {<Rating rating={rating} />}
+            </div>
+          </div>
           <h1 className="details-rating-heading">Details Rating</h1>
           <div className="details-rating-wrapper">
             {detaisReating.map((item, index) => {
@@ -56,14 +72,6 @@ export function ReviewDetailsPopUP(props) {
               );
             })}
           </div>
-        </div>
-        <div className="review-description">{reviewDescription}</div>
-        <div className="review-details">
-          <div className="review-date">{reviewDate}</div>
-          <button onClick={onButtonClick} className="share-group">
-            <i className="fa fa-info-circle"></i>
-            <span>{reviewDetails}</span>
-          </button>
         </div>
       </div>
     </>

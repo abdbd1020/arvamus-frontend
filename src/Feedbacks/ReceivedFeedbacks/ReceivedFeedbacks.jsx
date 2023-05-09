@@ -9,7 +9,10 @@ import Sidebar from "../../General/Sidebar/Sidebar";
 const ReceivedFeedbacks = () => {
   // define a state variable to store the popup state
   const [popupState, setPopupState] = useState(false);
-  const onPopupButtonClick = () => {
+  const [currentReviewLoaded, setCurrentReview] = useState({});
+
+  const onPopupButtonClick = (review) => {
+    setCurrentReview(review);
     setPopupState(true);
   };
   const onPopupCloseButtonClick = () => {
@@ -22,7 +25,10 @@ const ReceivedFeedbacks = () => {
     <Sidebar>
       {/* // a popup to show the review details. where will be 5 details reviews with 1 - 5 star and a comment details. 5 review will be shown in 5 row under a div. and comment will be shown in a div. there will be a close button to close the popup. */}
       {popupState && (
-        <ReviewDetailsPopUP onButtonClick={onPopupCloseButtonClick} />
+        <ReviewDetailsPopUP
+          onButtonClick={onPopupCloseButtonClick}
+          currentReviewLoaded={currentReviewLoaded}
+        />
       )}
       <div className="review-feedback-main">
         <div className="card">
@@ -38,7 +44,7 @@ const ReceivedFeedbacks = () => {
                   reviewDate={review.reviewDate}
                   reviewDetails={review.reviewDetails}
                   // with preview perimeter we can pass a function to the child component
-                  onButtonClick={onPopupButtonClick}
+                  onButtonClick={() => onPopupButtonClick(review)}
                 />
               );
             })}
