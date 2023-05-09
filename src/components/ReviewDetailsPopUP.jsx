@@ -12,11 +12,11 @@ export function ReviewDetailsPopUP(props) {
     reviewDate = "Feb 13, 2021",
     reviewDetails = "See More Details",
     detaisReating = [
-      { title: "Battery", rating: 4 },
-      { title: "Camera", rating: 3 },
-      { title: "Display", rating: 4 },
-      { title: "Value for Money", rating: 4 },
-      { title: "Performance", rating: 4 },
+      { title: "Battery", rating: Math.random() * 5 },
+      { title: "Camera", rating: Math.random() * 5 },
+      { title: "Display", rating: Math.random() * 5 },
+      { title: "Value for Money", rating: Math.random() * 5 },
+      { title: "Performance", rating: Math.random() * 5 },
     ],
   } = currentReviewLoaded;
 
@@ -55,22 +55,25 @@ export function ReviewDetailsPopUP(props) {
           <div className="rating-wrapper">
             <span className="rating-title">Average Rating</span>
             <div className="rating-inner-wrapper">
-              <span className="rating-text">{rating}</span>
+              {/* rating will be 2 digit floot number */}
+              <span className="rating-text">{rating.toFixed(1)}</span>
               {<Rating rating={rating} />}
             </div>
           </div>
-          <h1 className="details-rating-heading">Details Rating</h1>
-          <div className="details-rating-wrapper">
-            {detaisReating.map((item, index) => {
-              return (
-                <div key={index} className="details-rating-item">
-                  <span className="details-rating-item-title">
-                    {item.title}
-                  </span>
-                  <Rating rating={item.rating} />
-                </div>
-              );
-            })}
+          <div className="review-details-main-wrapper">
+            <h3 className="details-rating-heading">Details Rating</h3>
+            <div className="details-rating-wrapper">
+              {detaisReating.map((item, index) => {
+                return (
+                  <div key={index} className="details-rating-item">
+                    <span className="details-rating-item-title">
+                      {item.title}
+                    </span>
+                    <Rating rating={item.rating} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
