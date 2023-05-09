@@ -1,16 +1,21 @@
 import React from "react";
-import { Rating } from "./Rating";
+import { Rating } from "../Rating/Rating";
+import "./ReviewDetailsPopUP.css";
 
 export function ReviewDetailsPopUP(props) {
-  const { currentReviewLoaded = {}, onButtonClick = () => {} } = props;
-
+  const {
+    currentReviewLoaded = {},
+    onButtonClick = () => {},
+    onReviewEdit = () => {},
+    onRatingEdit = () => {},
+    isEditable = false,
+  } = props;
   const {
     name = "Alice Banks",
     designation = "Lecturer, ICT Department",
     rating = 3,
     reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
     reviewDate = "Feb 13, 2021",
-    reviewDetails = "See More Details",
     detaisReating = [
       { title: "Battery", rating: Math.random() * 5 },
       { title: "Camera", rating: Math.random() * 5 },
@@ -19,8 +24,6 @@ export function ReviewDetailsPopUP(props) {
       { title: "Performance", rating: Math.random() * 5 },
     ],
   } = currentReviewLoaded;
-
-  // rating = rating > 5 ? 5 : rating;
 
   return (
     <>
@@ -43,9 +46,19 @@ export function ReviewDetailsPopUP(props) {
               <span className="designation">{designation}</span>
             </p>
           </div>
-
           <div className="review-description">
-            <h3 className="review-description-title">Full Review</h3>
+            <div className="review-description-title-wrapper">
+              <h3 className="review-description-title">Full Review</h3>
+              {isEditable && (
+                <button
+                  type="button"
+                  aria-label="edit review button"
+                  className="edit-btn edit-review"
+                  onClick={onReviewEdit}>
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+              )}
+            </div>
             <p className="review-description-details">{reviewDescription}</p>
           </div>
           <span className="review-date">Review Date {reviewDate}</span>
@@ -54,13 +67,23 @@ export function ReviewDetailsPopUP(props) {
           <div className="rating-wrapper">
             <span className="rating-title">Average Rating</span>
             <div className="rating-inner-wrapper">
-              {/* rating will be 2 digit floot number */}
               <span className="rating-text">{rating.toFixed(1)}</span>
               {<Rating rating={rating} />}
             </div>
           </div>
-          <div className="review-details-main-wrapper">
-            <h3 className="details-rating-heading">Details Rating</h3>
+          <div className="details-rating-main-wrapper">
+            <div className="rating-description-title-wrapper">
+              <h3 className="details-rating-heading">Details Rating</h3>
+              {isEditable && (
+                <button
+                  type="button"
+                  aria-label="edit rating button"
+                  className="edit-btn edit-review"
+                  onClick={onRatingEdit}>
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+              )}
+            </div>
             <div className="details-rating-wrapper">
               {detaisReating.map((item, index) => {
                 return (

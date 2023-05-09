@@ -1,4 +1,4 @@
-import "./commonStyle.css";
+import "../commonStyle.css";
 
 export function Rating(props) {
   let { rating = 5 } = props;

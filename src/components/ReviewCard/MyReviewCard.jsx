@@ -1,17 +1,18 @@
 import React from "react";
-import { Rating } from "./Rating";
+import { Rating } from "../Rating/Rating";
+import "./MyReviewCard.css";
 
 export function MyReviewCard(props) {
-  let {
+  const { information = {}, onButtonClick = () => {} } = props;
+  const {
     name = "Alice Banks",
     designation = "Lecturer, ICT Department",
-    rating = 3,
+    rating: rawRating = 3,
     reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
     reviewDate = "Feb 13, 2021",
     reviewDetails = "See More Details",
-    onButtonClick = () => {},
-  } = props;
-  rating = rating > 5 ? 5 : rating;
+  } = information;
+  let rating = rawRating > 5 ? 5 : rawRating;
 
   return (
     <div className="review-card">
