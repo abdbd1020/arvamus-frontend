@@ -193,3 +193,29 @@ body {
 	border: unset;
 	color: #8c8aa7;
 }
+
+
+/* popup design start  */
+.review-details-popIn {
+	position: absolute;
+	height: 60vh;
+	width: 70vw;
+	background: #2c2b3f;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+}
+
+.review-details-popIn-overlay {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	background: #6d698f7d;
+}
