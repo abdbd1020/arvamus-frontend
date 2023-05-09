@@ -41,15 +41,14 @@ export function ReviewDetailsPopUP(props) {
             <p className="info">
               <span className="name">{name}</span>
               <span className="designation">{designation}</span>
-              <span className="review-date">{reviewDate}</span>
             </p>
           </div>
 
           <div className="review-description">
-            <h3 className="review-description-title">Review</h3>
+            <h3 className="review-description-title">Full Review</h3>
             <p className="review-description-details">{reviewDescription}</p>
           </div>
-          <div className="review-details"></div>
+          <span className="review-date">Review Date {reviewDate}</span>
         </div>
         <div className="details-rating">
           <div className="rating-wrapper">

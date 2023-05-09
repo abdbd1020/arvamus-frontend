@@ -1,4 +1,5 @@
 import React from "react";
+import { Rating } from "./Rating";
 
 export function MyReviewCard(props) {
   let {
@@ -22,15 +23,7 @@ export function MyReviewCard(props) {
             <span className="designation">{designation}</span>
           </p>
         </div>
-        <div className="rating">
-          {[...Array(5)].map((star, index) => {
-            return index < rating ? (
-              <i key={index} id="one" className={"fas fa-star"}></i>
-            ) : (
-              "☆"
-            );
-          })}
-        </div>
+        <Rating rating={rating} />
       </div>
       <div className="review-description">{reviewDescription}</div>
       <div className="review-details">
