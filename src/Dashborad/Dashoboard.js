@@ -8,38 +8,17 @@ import staffImage from "../Images/staff4.png";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getAllTeachers, getAllStaff } from "../Services/appService";
-
+import ReactModal from "react-modal";
 const Dashboard = () => {
-  // const location = useLocation();
+  const location = useLocation();
 
-  // const [userId, setUserId] = useState(location.state?.userId);
+  const [userId, setUserId] = useState(location.state?.userId);
 
-  const tteachers = [
-    {
-      src: profileImage,
-      designation: "Lecturer",
-      name: "Fahim Arefin",
-      rating: 5,
-    },
-    {
-      src: teacherImage,
-      designation: "Lecturer",
-      name: "Fahim Arefin",
-      rating: 5,
-    },
-    {
-      src: teacherImage,
-      designation: "Lecturer",
-      name: "Fahim Arefin",
-      rating: 5,
-    },
-  ];
-
-  const sstaffs = [
-    { src: staffImage, designation: "Cleaner", name: "MD Shahid", rating: 4 },
-    { src: staffImage, designation: "Cleaner", name: "MD Shahid", rating: 4 },
-    { src: staffImage, designation: "Cleaner", name: "MD Shahid", rating: 4 },
-  ];
+  try {
+    if (!userId) setUserId(localStorage.getItem("userId"));
+  } catch (err) {
+    console.log(err);
+  }
 
   const [teachers, setTeachers] = useState([]);
   const [staffs, setStaffs] = useState([]);
@@ -84,6 +63,8 @@ const Dashboard = () => {
                     src={teacherImage}
                     name={teacher.firstname + " " + teacher.lastname}
                     designation="Lecturer"
+                    reviewee={JSON.stringify(teacher)}
+                    reviewerId={userId}
                     rating={5}
                   />
                 </li>
@@ -98,8 +79,10 @@ const Dashboard = () => {
                 <li key={index}>
                   <PersonItem
                     src={staffImage}
+                    reviewee={JSON.stringify(staff)}
                     name={staff.firstname + " " + staff.lastname}
                     designation="Cleaner"
+                    reviewerId={userId}
                     rating={4}
                   />
                 </li>
