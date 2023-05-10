@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
-import './RatingSelect.css';
+import React, { useState } from "react";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import "./RatingSelect.css";
 
-function RatingSelect() {
-  const [rating, setRating] = useState(0);
+function RatingSelect({ onRatingChange = () => {}, initialRating = 0 }) {
+  const [rating, setRating] = useState(initialRating);
   const [hover, setHover] = useState(0);
 
   const handleStarClick = (index) => {
     const newRating = index + 1;
     setRating(newRating);
+    onRatingChange(newRating);
   };
 
   const handleStarHover = (index) => {
@@ -22,7 +23,10 @@ function RatingSelect() {
   const renderStar = (index) => {
     if (index < (hover || rating)) {
       return <FaStar key={index} className="star filled" />;
-    } else if (index === Math.floor(hover || rating) && !Number.isInteger(rating)) {
+    } else if (
+      index === Math.floor(hover || rating) &&
+      !Number.isInteger(rating)
+    ) {
       return <FaStarHalfAlt key={index} className="star half-filled" />;
     } else {
       return <FaRegStar key={index} className="star" />;
@@ -38,8 +42,7 @@ function RatingSelect() {
             className="rating-star"
             onClick={() => handleStarClick(index)}
             onMouseEnter={() => handleStarHover(index)}
-            onMouseLeave={handleStarLeave}
-          >
+            onMouseLeave={handleStarLeave}>
             {renderStar(index)}
           </span>
         ))}
@@ -47,5 +50,4 @@ function RatingSelect() {
     </div>
   );
 }
-
 export default RatingSelect;

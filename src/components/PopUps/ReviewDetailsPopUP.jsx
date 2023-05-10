@@ -17,11 +17,11 @@ export function ReviewDetailsPopUP(props) {
     reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
     reviewDate = "Feb 13, 2021",
     detaisReating = [
-      { title: "Responsibility", rating: Math.random() * 5 },
-      { title: "Behavior", rating: Math.random() * 5 },
-      { title: "Professionalism", rating: Math.random() * 5 },
-      { title: "Proficiency", rating: Math.random() * 5 },
-      { title: "Management", rating: Math.random() * 5 },
+      { title: "Battery", rating: Math.random() * 5 },
+      { title: "Camera", rating: Math.random() * 5 },
+      { title: "Display", rating: Math.random() * 5 },
+      { title: "Value for Money", rating: Math.random() * 5 },
+      { title: "Performance", rating: Math.random() * 5 },
     ],
   } = currentReviewLoaded;
 

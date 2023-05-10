@@ -1,0 +1,227 @@
+.edit-rating-popIn-overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background: #6d698f7d;
+}
+
+.edit-rating-popIn {
+    position: absolute;
+    height: auto;
+    width: auto;
+    background: #2C2B3F;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 48px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 70px;
+}
+
+@media (max-width: 1024px) {
+    .edit-rating-popIn {
+        width: 100%;
+        height: 100%;
+        padding-left: 60px;
+        flex-direction: column;
+        overflow-y: scroll;
+        border-radius: 0;
+        gap: 40px;
+    }
+}
+
+.edit-rating-popIn .initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background: #d56a6a;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    font-family: "Mulish", sans-serif;
+}
+
+.edit-rating-popIn .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.edit-rating-popIn .name {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.edit-rating-popIn .designation {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: unset;
+}
+
+
+
+.edit-rating-popIn .details-rating {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .edit-rating-popIn .details-rating {
+        margin-top: unset;
+    }
+}
+
+
+.edit-rating-popIn .review-details-main-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: self-start;
+}
+
+.edit-rating-popIn .review-details-main-wrapper .review-details-main-item {
+    margin-top: 40px;
+}
+
+.edit-rating-popIn .details-rating-heading {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.edit-rating-popIn .details-rating-main-wrapper {
+    width: 100%;
+}
+
+.edit-rating-popIn .details-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 16px;
+}
+
+.edit-rating-popIn .details-rating-wrapper .details-rating-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.edit-rating-popIn .details-rating-wrapper .details-rating-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.details-rating-item .details-rating-item-title {
+    font-family: "Mulish", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.details-rating-item .details-rating-heading {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.edit-rating-popIn .details-rating-item .rating,
+.edit-rating-popIn .rating-inner-wrapper .rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.single-star {
+    display: flex;
+    align-items: center;
+}
+
+
+.edit-rating-popIn .close-btn {
+    position: absolute;
+    right: 48px;
+    top: 48px;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    border: unset;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-rating-popIn .close-btn>i {
+    font-size: 30px;
+}
+
+.edit-rating-popIn .share-group {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ebd916;
+    background: unset;
+    margin: 40px auto 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-rating-popIn .share-group:hover {
+    background: #ebd916;
+}
+
+.edit-rating-popIn .share-group i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.edit-rating-popIn .share-group>span {
+    background: unset;
+    border: unset;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 2px 25px;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-rating-popIn .share-group:hover>span {
+    color: #2c2b3f;
+}

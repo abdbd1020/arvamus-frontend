@@ -8,7 +8,6 @@ import staffImage from "../Images/staff4.png";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getAllTeachers, getAllStaff } from "../Services/appService";
-import ReactModal from "react-modal";
 const Dashboard = () => {
   const location = useLocation();
 
