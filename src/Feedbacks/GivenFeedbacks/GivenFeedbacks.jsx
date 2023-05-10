@@ -9,57 +9,47 @@ import { EditRatingPopUP } from "../../components/PopUps/EditRatingPopUP";
 
 const GivenFeedbacks = () => {
   const [reviewsAndRatings, setReversAndRatings] = useState(MOCK_DATA);
+  const [currentReviewLoaded, setCurrentReviewLoaded] = useState({});
 
-  const [popupState, setPopupState] = useState(false);
-  const [currentReviewLoaded, setCurrentReview] = useState({});
-
+  const [mainPopupState, setMainPopupState] = useState(false);
   const [RatingPopupState, setRatingPopupState] = useState(false);
-  const [RatingLoaded, setRatingLoaded] = useState({});
 
-  const [ReviewPopupState, setReviewPopupState] = useState(false);
-  const [ReviewLoaded, setReviewLoaded] = useState({});
-
-  const onPopupButtonClick = (review) => {
-    setCurrentReview(review);
-    setRatingLoaded(review);
-    setReviewLoaded(review);
-    setPopupState(true);
+  const onDetailsButtonClickFromMainPopUp = (review) => {
+    setCurrentReviewLoaded(review);
+    setMainPopupState(true);
   };
-  const onPopupCloseButtonClick = () => {
-    setPopupState(false);
+  const onClickMainPopUpCloseButton = () => {
+    setMainPopupState(false);
   };
 
-  const onReviewEdit = () => {
+  const onReviewEditButtonClickFromMainPopUp = () => {
     console.log("Review Edit");
-    setReviewPopupState(true);
   };
 
-  const onReviewPopupCloseButtonClick = () => {
-    setReviewPopupState(false);
-  };
-
-  const onRatingEdit = () => {
-    setPopupState(false);
+  const onRatingEditButtonClickFromMainPopUp = () => {
+    setMainPopupState(false);
     console.log("Rating Edit");
     setRatingPopupState(true);
   };
 
-  const onRatingPopupCloseButtonClick = () => {
+  const onEditRatingPopupCloseButtonClick = () => {
     setRatingPopupState(false);
-    setPopupState(true);
+    setMainPopupState(true);
   };
 
-  const onReviewUpdate = ({ ratings, id }) => {
+  const onEditRatingPopUpUpdateButtonClick = ({ ratings, id }) => {
     console.log("Review Update");
     console.log(ratings);
     setRatingPopupState(false);
-    setPopupState(true);
+    setMainPopupState(true);
 
     setReversAndRatings((prevReviewsAndRatings) => {
+      console.log(prevReviewsAndRatings);
       const updatedReviewsAndRatings = [...prevReviewsAndRatings];
       const index = updatedReviewsAndRatings.findIndex(
         (review) => review.id === id
       );
+      // updatedReviewsAndRatings[index].detailsRating = ratings;
       updatedReviewsAndRatings[index].rating =
         ratings.reduce((acc, curr) => acc + curr.rating, 0) / ratings.length;
       updatedReviewsAndRatings[index].ratings = ratings;
@@ -68,23 +58,23 @@ const GivenFeedbacks = () => {
     });
   };
 
-  console.log(popupState);
+  console.log(mainPopupState);
   return (
     <Sidebar>
       {RatingPopupState && (
         <EditRatingPopUP
-          onButtonClick={onRatingPopupCloseButtonClick}
+          onButtonClick={onEditRatingPopupCloseButtonClick}
+          onUpdateButtonClick={onEditRatingPopUpUpdateButtonClick}
           currentReviewLoaded={currentReviewLoaded}
-          onUpdateButtonClick={onReviewUpdate}
         />
       )}
-      {popupState && (
+      {mainPopupState && (
         <ReviewDetailsPopUP
           isEditable={true}
-          onReviewEdit={onReviewEdit}
-          onRatingEdit={onRatingEdit}
-          onButtonClick={onPopupCloseButtonClick}
-          currentReviewLoaded={RatingLoaded}
+          onReviewEdit={onReviewEditButtonClickFromMainPopUp}
+          onRatingEdit={onRatingEditButtonClickFromMainPopUp}
+          onButtonClick={onClickMainPopUpCloseButton}
+          currentReviewLoaded={currentReviewLoaded}
         />
       )}
       <div className="review-feedback-main">
@@ -93,8 +83,11 @@ const GivenFeedbacks = () => {
             {reviewsAndRatings.map((review) => {
               return (
                 <MyReviewCard
+                  key={review.id}
                   information={review}
-                  onButtonClick={() => onPopupButtonClick(review)}
+                  onButtonClick={() =>
+                    onDetailsButtonClickFromMainPopUp(review)
+                  }
                 />
               );
             })}

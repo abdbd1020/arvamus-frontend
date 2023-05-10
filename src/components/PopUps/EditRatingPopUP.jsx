@@ -11,7 +11,7 @@ export function EditRatingPopUP(props) {
   const {
     name = "Alice Banks",
     designation = "Lecturer, ICT Department",
-    detaisReating = [
+    detailsRating = [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -21,7 +21,7 @@ export function EditRatingPopUP(props) {
     id,
   } = currentReviewLoaded;
 
-  const [ratings, setRatings] = useState([...detaisReating]);
+  const [ratings, setRatings] = useState([...detailsRating]);
 
   const handleRatingChange = (index, rating) => {
     setRatings((prevRatings) => {
@@ -40,7 +40,7 @@ export function EditRatingPopUP(props) {
           aria-label="close Button"
           className="close-btn"
           onClick={onButtonClick}>
-          <i class="fa fa-times" aria-hidden="true"></i>
+          <i className="fa fa-times" aria-hidden="true"></i>
         </button>
         <div className="details-rating">
           <div className="main-information">
@@ -55,7 +55,7 @@ export function EditRatingPopUP(props) {
               <h3 className="details-rating-heading">Update Rating</h3>
             </div>
             <div className="details-rating-wrapper">
-              {detaisReating.map((heading, index) => {
+              {detailsRating.map((heading, index) => {
                 return (
                   <div className="details-rating-item" key={index}>
                     <span className="details-rating-item-title">
@@ -72,7 +72,7 @@ export function EditRatingPopUP(props) {
               })}
             </div>
             <button
-              class="share-group"
+              className="share-group"
               type="submit"
               area-aria-label="submit"
               onClick={() => onUpdateButtonClick({ ratings, id })}>

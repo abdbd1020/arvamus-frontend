@@ -16,7 +16,7 @@ export function ReviewDetailsPopUP(props) {
     rating = 3,
     reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
     reviewDate = "Feb 13, 2021",
-    detaisReating = [
+    detailsRating = [
       { title: "Responsibility", rating: Math.random() * 5 },
       { title: "Behavior", rating: Math.random() * 5 },
       { title: "Professionalism", rating: Math.random() * 5 },
@@ -36,7 +36,7 @@ export function ReviewDetailsPopUP(props) {
           aria-label="close Button"
           className="close-btn"
           onClick={onButtonClick}>
-          <i class="fa fa-times" aria-hidden="true"></i>
+          <i className="fa fa-times" aria-hidden="true"></i>
         </button>
         <div className="review-details-popIn-header">
           <div className="main-information">
@@ -55,7 +55,7 @@ export function ReviewDetailsPopUP(props) {
                   aria-label="edit review button"
                   className="edit-btn edit-review"
                   onClick={onReviewEdit}>
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <i className="fa-regular fa-pen-to-square"></i>
                 </button>
               )}
             </div>
@@ -80,18 +80,18 @@ export function ReviewDetailsPopUP(props) {
                   aria-label="edit rating button"
                   className="edit-btn edit-review"
                   onClick={onRatingEdit}>
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <i className="fa-regular fa-pen-to-square"></i>
                 </button>
               )}
             </div>
             <div className="details-rating-wrapper">
-              {detaisReating.map((item, index) => {
+              {detailsRating.map((item, index) => {
                 return (
                   <div key={index} className="details-rating-item">
                     <span className="details-rating-item-title">
                       {item.title}
                     </span>
-                    <Rating rating={item.rating} />
+                    <Rating key={index} rating={item.rating} />
                   </div>
                 );
               })}

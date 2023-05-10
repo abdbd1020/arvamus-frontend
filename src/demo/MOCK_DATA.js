@@ -6,7 +6,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "19.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 1 },
       { title: "Behavior", rating: 1 },
       { title: "Professionalism", rating: 1 },
@@ -21,7 +21,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "reviewDate": "20.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 1 },
       { title: "Behavior", rating: 5 },
       { title: "Professionalism", rating: 1 },
@@ -36,7 +36,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "reviewDate": "7.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 5 },
       { title: "Professionalism", rating: 5 },
@@ -51,7 +51,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "4.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 4 },
@@ -66,7 +66,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
     "reviewDate": "31.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 1 },
       { title: "Behavior", rating: 1 },
       { title: "Professionalism", rating: 1 },
@@ -81,7 +81,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "reviewDate": "4.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 4 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 4 },
@@ -96,7 +96,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "reviewDate": "5.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 3 },
       { title: "Professionalism", rating: 3 },
@@ -111,7 +111,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "reviewDate": "27.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 1 },
       { title: "Behavior", rating: 1 },
       { title: "Professionalism", rating: 1 },
@@ -126,7 +126,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Fusce consequat. Nulla nisl. Nunc nisl.",
     "reviewDate": "20.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 2 },
       { title: "Behavior", rating: 2 },
       { title: "Professionalism", rating: 2 },
@@ -141,7 +141,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "reviewDate": "22.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 3 },
       { title: "Behavior", rating: 3 },
       { title: "Professionalism", rating: 3 },
@@ -156,7 +156,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
     "reviewDate": "23.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 2 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 2 },
@@ -171,7 +171,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "reviewDate": "5.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -186,7 +186,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "reviewDate": "26.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -201,7 +201,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "reviewDate": "31.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -216,7 +216,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
     "reviewDate": "20.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -231,7 +231,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "reviewDate": "23.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -246,7 +246,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "reviewDate": "14.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -261,7 +261,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "reviewDate": "27.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -276,7 +276,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
     "reviewDate": "20.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -291,7 +291,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "reviewDate": "11.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -306,7 +306,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "30.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -321,7 +321,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "reviewDate": "25.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -336,7 +336,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "15.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -351,7 +351,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     "reviewDate": "25.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -366,7 +366,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "reviewDate": "7.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -381,7 +381,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "reviewDate": "5.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -396,7 +396,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "reviewDate": "3.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -411,7 +411,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "reviewDate": "20.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -426,7 +426,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "reviewDate": "13.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -441,7 +441,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "reviewDate": "19.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -456,7 +456,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     "reviewDate": "7.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -471,7 +471,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "reviewDate": "2.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -486,7 +486,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "reviewDate": "2.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -501,7 +501,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "reviewDate": "14.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -516,7 +516,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "reviewDate": "28.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -531,7 +531,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
     "reviewDate": "19.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -546,7 +546,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "reviewDate": "3.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -561,7 +561,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "reviewDate": "18.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -576,7 +576,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "reviewDate": "16.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -591,7 +591,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
     "reviewDate": "4.5.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -606,7 +606,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "reviewDate": "18.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -621,7 +621,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "reviewDate": "4.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -636,7 +636,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "reviewDate": "4.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -651,7 +651,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "reviewDate": "7.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -666,7 +666,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "reviewDate": "8.5.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -681,7 +681,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
     "reviewDate": "8.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -696,7 +696,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "reviewDate": "28.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -711,7 +711,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "reviewDate": "2.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -726,7 +726,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "reviewDate": "19.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -741,7 +741,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "reviewDate": "10.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -756,7 +756,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "reviewDate": "29.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -771,7 +771,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "reviewDate": "17.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -786,7 +786,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "reviewDate": "19.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -801,7 +801,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "reviewDate": "7.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -816,7 +816,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "reviewDate": "3.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -831,7 +831,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "reviewDate": "25.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -846,7 +846,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "reviewDate": "21.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -861,7 +861,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "reviewDate": "17.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -876,7 +876,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "reviewDate": "1.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -891,7 +891,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "29.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -906,7 +906,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "reviewDate": "31.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -921,7 +921,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "3.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -936,7 +936,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "reviewDate": "20.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -951,7 +951,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "reviewDate": "2.3.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -966,7 +966,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "reviewDate": "9.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -981,7 +981,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
     "reviewDate": "28.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -996,7 +996,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
     "reviewDate": "1.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1011,7 +1011,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "reviewDate": "8.5.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1026,7 +1026,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "reviewDate": "18.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1041,7 +1041,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
     "reviewDate": "19.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1056,7 +1056,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "reviewDate": "10.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1071,7 +1071,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "reviewDate": "14.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1086,7 +1086,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "reviewDate": "11.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1101,7 +1101,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
     "reviewDate": "1.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1116,7 +1116,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "reviewDate": "20.2.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1131,7 +1131,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
     "reviewDate": "25.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1146,7 +1146,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "reviewDate": "6.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1161,7 +1161,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "reviewDate": "9.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1176,7 +1176,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "reviewDate": "13.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1191,7 +1191,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "reviewDate": "10.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1206,7 +1206,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "reviewDate": "28.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1221,7 +1221,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "reviewDate": "13.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1236,7 +1236,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "reviewDate": "18.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1251,7 +1251,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     "reviewDate": "30.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1266,7 +1266,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
     "reviewDate": "1.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1281,7 +1281,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "reviewDate": "24.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1296,7 +1296,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "reviewDate": "8.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1311,7 +1311,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "reviewDate": "29.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1326,7 +1326,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "reviewDate": "22.1.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1341,7 +1341,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "reviewDate": "13.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1356,7 +1356,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "reviewDate": "25.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1371,7 +1371,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "reviewDate": "16.5.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1386,7 +1386,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "reviewDate": "15.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1401,7 +1401,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "reviewDate": "16.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1416,7 +1416,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "reviewDate": "21.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1431,7 +1431,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "reviewDate": "16.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1446,7 +1446,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "reviewDate": "5.12.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1461,7 +1461,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "reviewDate": "19.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1476,7 +1476,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "reviewDate": "25.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1491,7 +1491,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "reviewDate": "4.7.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1506,7 +1506,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     "reviewDate": "18.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1521,7 +1521,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "9.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1536,7 +1536,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "27.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1551,7 +1551,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "reviewDate": "1.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1566,7 +1566,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "reviewDate": "16.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1581,7 +1581,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "7.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1596,7 +1596,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
     "reviewDate": "28.9.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1611,7 +1611,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "6.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1626,7 +1626,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "reviewDate": "7.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1641,7 +1641,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
     "reviewDate": "24.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1656,7 +1656,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "reviewDate": "1.4.2023",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1671,7 +1671,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     "reviewDate": "14.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1686,7 +1686,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
     "reviewDate": "10.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1701,7 +1701,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
     "reviewDate": "26.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1716,7 +1716,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "reviewDate": "8.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1731,7 +1731,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
     "reviewDate": "15.8.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1746,7 +1746,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     "reviewDate": "27.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1761,7 +1761,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "reviewDate": "1.10.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1776,7 +1776,7 @@ export const MOCK_DATA = [
     "reviewDescription": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "reviewDate": "23.11.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1791,7 +1791,7 @@ export const MOCK_DATA = [
     "reviewDescription": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
     "reviewDate": "11.6.2022",
     "reviewDetails": "See More Details",
-    detaisReating: [
+    detailsRating: [
       { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
@@ -1800,9 +1800,9 @@ export const MOCK_DATA = [
     ],
   }
 ].map(data => {
-  const { detaisReating } = data;
-  const ratingSum = detaisReating.reduce((sum, item) => sum + item.rating, 0);
-  const averageRating = ratingSum / detaisReating.length;
+  const { detailsRating } = data;
+  const ratingSum = detailsRating.reduce((sum, item) => sum + item.rating, 0);
+  const averageRating = ratingSum / detailsRating.length;
 
   return {
     ...data,

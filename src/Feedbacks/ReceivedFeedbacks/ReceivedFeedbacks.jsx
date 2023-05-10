@@ -34,6 +34,7 @@ const ReceivedFeedbacks = () => {
             {reviewsAndRatings.map((review) => {
               return (
                 <MyReviewCard
+                  key={review.id}
                   information={review}
                   onButtonClick={() => onPopupButtonClick(review)}
                 />
