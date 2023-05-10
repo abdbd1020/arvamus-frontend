@@ -1,0 +1,13 @@
+.rating {
+    display: flex;
+    gap: 3px;
+}
+
+.single-star.zero-star svg.star {
+    color: #f3d779;
+}
+
+svg.star {
+    width: 20px;
+    height: 17px;
+}

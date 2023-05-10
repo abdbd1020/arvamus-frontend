@@ -8,6 +8,8 @@ import Sidebar from "../../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../../components/PopUps/EditRatingPopUP";
 
 const GivenFeedbacks = () => {
+  const [reviewsAndRatings, setReversAndRatings] = useState(MOCK_DATA);
+
   const [popupState, setPopupState] = useState(false);
   const [currentReviewLoaded, setCurrentReview] = useState({});
 
@@ -47,14 +49,25 @@ const GivenFeedbacks = () => {
     setPopupState(true);
   };
 
-  const onReviewUpdate = (ratings) => {
+  const onReviewUpdate = ({ ratings, id }) => {
     console.log("Review Update");
     console.log(ratings);
     setRatingPopupState(false);
     setPopupState(true);
+
+    setReversAndRatings((prevReviewsAndRatings) => {
+      const updatedReviewsAndRatings = [...prevReviewsAndRatings];
+      const index = updatedReviewsAndRatings.findIndex(
+        (review) => review.id === id
+      );
+      updatedReviewsAndRatings[index].rating =
+        ratings.reduce((acc, curr) => acc + curr.rating, 0) / ratings.length;
+      updatedReviewsAndRatings[index].ratings = ratings;
+
+      return updatedReviewsAndRatings;
+    });
   };
 
-  const reviewsAndRatings = MOCK_DATA;
   console.log(popupState);
   return (
     <Sidebar>

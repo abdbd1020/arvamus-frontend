@@ -18,15 +18,13 @@ export function EditRatingPopUP(props) {
       { title: "Proficiency", rating: 2 },
       { title: "Management", rating: 4 },
     ],
+    id,
   } = currentReviewLoaded;
 
-  const [ratings, setRatings] = useState(detaisReating);
+  const [ratings, setRatings] = useState([...detaisReating]);
 
   const handleRatingChange = (index, rating) => {
-    console.log(index, "index");
-    console.log(rating, "rating");
     setRatings((prevRatings) => {
-      console.log(prevRatings, "prevRatings");
       const updatedRatings = [...prevRatings];
       updatedRatings[index].rating = rating;
       return updatedRatings;
@@ -77,8 +75,7 @@ export function EditRatingPopUP(props) {
               class="share-group"
               type="submit"
               area-aria-label="submit"
-              // with onUpdateButtonClick click it will pass the ratings to the parent component"
-              onClick={() => onUpdateButtonClick(ratings)}>
+              onClick={() => onUpdateButtonClick({ ratings, id })}>
               <span>Update</span>
             </button>
           </div>
