@@ -6,6 +6,7 @@ import { MOCK_DATA } from "../../demo/MOCK_DATA";
 import { ReviewDetailsPopUP } from "../../components/PopUps/ReviewDetailsPopUP";
 import Sidebar from "../../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../../components/PopUps/EditRatingPopUP";
+import { EditReviewPopUP } from "../../components/PopUps/EditReviewPopUP";
 
 const GivenFeedbacks = () => {
   const [reviewsAndRatings, setReversAndRatings] = useState(MOCK_DATA);
@@ -13,6 +14,7 @@ const GivenFeedbacks = () => {
 
   const [mainPopupState, setMainPopupState] = useState(false);
   const [RatingPopupState, setRatingPopupState] = useState(false);
+  const [ReviewPopupState, setReviewPopupState] = useState(false);
 
   const onDetailsButtonClickFromMainPopUp = (review) => {
     setCurrentReviewLoaded(review);
@@ -24,6 +26,8 @@ const GivenFeedbacks = () => {
 
   const onReviewEditButtonClickFromMainPopUp = () => {
     console.log("Review Edit");
+    setReviewPopupState(true);
+    setMainPopupState(false);
   };
 
   const onRatingEditButtonClickFromMainPopUp = () => {
@@ -34,6 +38,11 @@ const GivenFeedbacks = () => {
 
   const onEditRatingPopupCloseButtonClick = () => {
     setRatingPopupState(false);
+    setMainPopupState(true);
+  };
+
+  const onEditReviewPopupCloseButtonClick = () => {
+    setReviewPopupState(false);
     setMainPopupState(true);
   };
 
@@ -58,6 +67,23 @@ const GivenFeedbacks = () => {
     });
   };
 
+  const onEditReviewPopUpUpdateButtonClick = ({ review, id }) => {
+    console.log("Review Update");
+    console.log(review);
+    setReviewPopupState(false);
+    setMainPopupState(true);
+
+    setReversAndRatings((prevReviewsAndRatings) => {
+      console.log(prevReviewsAndRatings);
+      const updatedReviewsAndRatings = [...prevReviewsAndRatings];
+      const index = updatedReviewsAndRatings.findIndex(
+        (review) => review.id === id
+      );
+      updatedReviewsAndRatings[index].reviewDescription = review;
+      return updatedReviewsAndRatings;
+    });
+  };
+
   console.log(mainPopupState);
   return (
     <Sidebar>
@@ -65,6 +91,13 @@ const GivenFeedbacks = () => {
         <EditRatingPopUP
           onButtonClick={onEditRatingPopupCloseButtonClick}
           onUpdateButtonClick={onEditRatingPopUpUpdateButtonClick}
+          currentReviewLoaded={currentReviewLoaded}
+        />
+      )}
+      {ReviewPopupState && (
+        <EditReviewPopUP
+          onButtonClick={onEditReviewPopupCloseButtonClick}
+          onUpdateButtonClick={onEditReviewPopUpUpdateButtonClick}
           currentReviewLoaded={currentReviewLoaded}
         />
       )}
