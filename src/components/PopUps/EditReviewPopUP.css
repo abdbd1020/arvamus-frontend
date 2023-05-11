@@ -96,17 +96,8 @@
     }
 }
 
-
-.edit-review-popIn .review-details-main-wrapper {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: self-start;
-}
-
-.edit-review-popIn .review-details-main-wrapper .review-details-main-item {
-    margin-top: 40px;
+.edit-review-popIn .details-review-main-wrapper {
+    width: 100%;
 }
 
 .edit-review-popIn .details-review-heading {
@@ -120,10 +111,6 @@
     margin-top: 35px;
 }
 
-.edit-review-popIn .details-review-main-wrapper {
-    width: 100%;
-}
-
 .edit-review-popIn .details-review-wrapper {
     display: flex;
     flex-direction: column;
@@ -135,37 +122,6 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
-}
-
-.edit-review-popIn .details-review-wrapper .details-review-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.details-review-item .details-review-item-title {
-    font-family: "Mulish", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    text-align: left;
-}
-
-.details-review-item .details-review-heading {
-    margin-top: 30px;
-    text-align: left;
-}
-
-.edit-review-popIn .details-review-item .review,
-.edit-review-popIn .review-inner-wrapper .review {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
 }
 
 .edit-review-popIn .details-review-textarea {
@@ -186,7 +142,7 @@
 }
 
 .edit-review-popIn .details-review-textarea::-webkit-scrollbar {
-    width: 17px;
+    width: 7px;
 }
 
 .edit-review-popIn .details-review-textarea::-webkit-scrollbar-track {
@@ -201,6 +157,10 @@
     background: #1e1d2b
 }
 
+.edit-review-popIn .details-review-textarea:focus {
+    background: #4b4966;
+}
+
 @media (max-width: 1024px) {
     .edit-review-popIn .details-review-textarea {
         width: 100%;
@@ -208,12 +168,6 @@
         max-width: 100%;
     }
 }
-
-.single-star {
-    display: flex;
-    align-items: center;
-}
-
 
 .edit-review-popIn .close-btn {
     position: absolute;

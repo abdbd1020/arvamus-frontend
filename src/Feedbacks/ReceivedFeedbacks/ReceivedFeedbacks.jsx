@@ -3,8 +3,8 @@ import { useState } from "react";
 import "./ReceivedFeedbacks.css";
 import { MyReviewCard } from "../../components/ReviewCard/MyReviewCard";
 import { MOCK_DATA } from "../../demo/MOCK_DATA";
-import { ReviewDetailsPopUP } from "../../components/ReviewPopUp/ReviewDetailsPopUP";
 import Sidebar from "../../General/Sidebar/Sidebar";
+import { ReviewDetailsPopUP } from "../../components/PopUps/ReviewDetailsPopUP";
 
 const ReceivedFeedbacks = () => {
   const [popupState, setPopupState] = useState(false);
