@@ -9,8 +9,25 @@ body {
 	right: 0;
 	width: calc(100vw - 50px);
 	height: 100vh;
-	overflow: scroll;
+	overflow-y: scroll;
 }
+
+/* .review-feedback-main::-webkit-scrollbar {
+	width: 7px;
+}
+
+.review-feedback-main .review-description-details::-webkit-scrollbar-track {
+	background-color: #13cc85;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.review-feedback-main .review-description-details::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #d40909;
+} */
+
 
 .review-feedback-main .card {
 	width: 100%;

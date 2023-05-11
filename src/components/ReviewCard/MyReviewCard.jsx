@@ -1,6 +1,7 @@
 import React from "react";
 import { Rating } from "../Rating/Rating";
 import "./MyReviewCard.css";
+import { LetterImage } from "../ImageComponent/LetterImage";
 
 export function MyReviewCard(props) {
   const { information = {}, onButtonClick = () => {} } = props;
@@ -18,7 +19,7 @@ export function MyReviewCard(props) {
     <div className="review-card">
       <div className="review-header">
         <div className="name-group">
-          <div className="initials">A</div>
+          <LetterImage name={name} />
           <p className="info">
             <span className="name">{name}</span>
             <span className="designation">{designation}</span>

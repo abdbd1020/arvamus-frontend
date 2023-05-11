@@ -1,0 +1,79 @@
+body {
+  margin: 0px;
+}
+
+.given-container {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.given-listii {
+  display: flex;
+  width: 100%;
+  margin-left: 2%;
+}
+
+.given-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.list-header {
+  margin-left: 12rem;
+  font-size: 1.5rem !important;
+  margin-top: 1rem;
+}
+
+.given-separator {
+  width: 0.1vw;
+  height: 100vh;
+  /* background-color: lightgray;  */
+  /* box-shadow: 0 0 2px black; */
+}
+
+.given-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  width: 50%;
+  justify-content: center;
+}
+
+.given-list li {
+  /* padding: 7px; */
+  /* margin-top: 1px; */
+  width: 300%;
+  /* background-color: #000; */
+  margin: auto;
+  /* border: 2px solid red; */
+  /* border-radius: 10px; */
+}

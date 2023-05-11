@@ -15,6 +15,10 @@ const Dashboard = () => {
 
   try {
     if (!userId) setUserId(localStorage.getItem("userId"));
+    if (!userId) {
+      // go back to login page
+      setUserId(1);
+    }
   } catch (err) {
     console.log(err);
   }
