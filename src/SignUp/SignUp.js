@@ -107,9 +107,9 @@ function Signup() {
           <h2>Sign Up</h2>
           <div className="signup-row">
             <div className="signup-field">
-              <label className="form-label" htmlFor="first-name">
+              {/* <label className="form-label" htmlFor="first-name">
                 First Name*
-              </label>
+              </label> */}
               <input
                 type="text"
                 id="first-name"
@@ -122,9 +122,9 @@ function Signup() {
               {errors.firstName && <p className="error">{errors.firstName}</p>}
             </div>
             <div className="signup-field">
-              <label className="form-label" htmlFor="last-name">
+              {/* <label className="form-label" htmlFor="last-name">
                 Last Name
-              </label>
+              </label> */}
               <input
                 type="text"
                 id="last-name"
@@ -139,9 +139,9 @@ function Signup() {
           </div>
           <div className="signup-row">
             <div className="signup-field">
-              <label className="form-label" htmlFor="email">
+              {/* <label className="form-label" htmlFor="email">
                 Email*
-              </label>
+              </label> */}
               <input
                 type="email"
                 id="email"
@@ -154,9 +154,9 @@ function Signup() {
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <div className="signup-field">
-              <label className="form-label" htmlFor="registration-number">
+              {/* <label className="form-label" htmlFor="registration-number">
                 Phone Number*
-              </label>
+              </label> */}
               <input
                 type="text"
                 id="registration-number"
@@ -173,9 +173,9 @@ function Signup() {
           </div>
           <div className="signup-row">
             <div className="signup-field">
-              <label className="form-label" htmlFor="password">
+              {/* <label className="form-label" htmlFor="password">
                 Password*
-              </label>
+              </label> */}
               <input
                 type="password"
                 id="password"
@@ -188,9 +188,9 @@ function Signup() {
               {errors.password && <p className="error">{errors.password}</p>}
             </div>
             <div className="signup-field">
-              <label className="form-label" htmlFor="confirm-password">
+              {/* <label className="form-label" htmlFor="confirm-password">
                 Confirm Password*
-              </label>
+              </label> */}
               <input
                 type="password"
                 id="confirm-password"
@@ -234,7 +234,7 @@ function Signup() {
                 />
                 <label
                   className="ind-label"
-                  style={{ opacity: "0.7" }}
+                  style={{ color: "white" }}
                   htmlFor="option2"
                 >
                   Neutral

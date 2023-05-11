@@ -1,111 +1,112 @@
 .review-form-container {
-    width: 50%;
-    margin: 0 auto;
-    /* background-color: rgba(255, 255, 255, 0.7); */
-    background-color: #F1F6F9;
-    border-width: 3px;
-    border-style: solid;
-    border: #E5E7E9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    margin-top: 10%;
-    text-align: left;
-    padding: 10px;
-    border-radius: 20px;
-  }
+  width: 50%;
+  margin: 0 auto;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-color: #F1F6F9;
+  border-width: 3px;
+  border-style: solid;
+  border: #E5E7E9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  margin-top: 10%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 20px;
+}
 
-  .add-review-heading{
-    margin-left: 2%;
-  }
-  
-  .form-input-section {
-    margin-bottom: 20px;
-    width: 80%;
-    margin-left: 5%;
-    margin-top: 3%;
-  }
-  
-  textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 8px;
-    border-radius: 20px;
-    font-size: large;
-  }
+.add-review-heading {
+  margin-left: 2%;
+}
 
-  textarea:active{
-    border-color: blue ;
-  }
-  
-  .radio-section {
-    margin-bottom: 20px;
-    margin-left: 5%;
-  }
+.form-input-section {
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 3%;
+}
 
-  .radio-section:hover{
-    background-color: #DBDFEA66;
-    border-radius: 20px;
-    padding: 5px;
-    width: 50%;
-  }
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: large;
+}
 
-  .ind-option{
-    cursor: pointer;
-  }
+textarea:active {
+  border-color: blue;
+}
 
-  .radio-heading{
-    font-size: x-large;
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-  }
-  
-  .radio-options {
-    display: flex;
-    flex-direction: row;
-    margin-right: 30%;
-  }
+.radio-section {
+  margin-bottom: 20px;
+  margin-left: 5%;
+}
 
-  .specific-option{
-    margin-left: 5%;
-  }
-  
-  .radio-options > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
+.radio-section:hover {
+  background-color: #DBDFEA66;
+  border-radius: 20px;
+  padding: 5px;
+  width: 50%;
+}
 
-  .ind-label{
-    font-size: medium;
-  }
-  
-  input[type='radio'] {
-    margin-right:5px;
-  }
+.ind-option {
+  cursor: pointer;
+}
 
-  
-  .review-button {
-    width: 80%;
-    margin-left: 10%;
-    padding: 10px;
-    border: none;
-    border-radius: 0px;
-    align-items: center;
-    margin-top: 10px;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    font-family: var(--font2);
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
+.radio-heading {
+  font-size: x-large;
+}
 
+h2 {
+  margin-bottom: 10px;
+}
 
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  justify-content: center;
+  margin: unset;
+}
 
+.specific-option {
+  margin-left: 5%;
+}
 
+.radio-options>div {
+  display: flex;
+  align-items: center;
+  margin: unset;
+  justify-content: flex-start;
+  gap: 7px;
+}
 
+.ind-label {
+  font-size: medium;
+}
 
+.specific-option [type="radio"] {
+  height: 20px;
+  width: 20px;
+}
 
-  
+label.ind-label {
+  margin: unset;
+}
+
+.review-button {
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px;
+  border: none;
+  border-radius: 0px;
+  align-items: center;
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-family: var(--font2);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
