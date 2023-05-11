@@ -2,14 +2,15 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./LoginPage/LoginPage";
 import Signup from "./SignUp/SignUp";
-import Dashboard from "./Dashborad/Dashoboard";
+
 import Settings from "./Settings/Settings";
 import ReviewForm from "./Feedbacks/FeedbackForms/ReviewForm/ReviewForm";
 import RatingSelect from "./Feedbacks/FeedbackForms/RatingForm/RatingSelect";
 import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
 import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
 import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
-import HomePage from "./Homepage/HomePage";
+import Dashboard from "./Dashboard/Dashboard";
+import HomePage from "./HomePage/HomePage";
 // import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 // import { Navbar } from "./Navbar";
