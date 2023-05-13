@@ -4,6 +4,7 @@ import "./MyReviewCard.css";
 import { LetterImage } from "../ImageComponent/LetterImage";
 
 export function MyReviewCard(props) {
+  console.log(props)
   const { information = {}, onButtonClick = () => {} } = props;
   const {
     name = "Alice Banks",

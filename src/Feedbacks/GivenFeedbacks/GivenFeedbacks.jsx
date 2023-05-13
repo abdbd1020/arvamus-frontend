@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./GivenFeedbacks.css";
 import { MyReviewCard } from "../../components/ReviewCard/MyReviewCard";
 import { MOCK_DATA } from "../../demo/MOCK_DATA";
@@ -7,14 +7,35 @@ import { ReviewDetailsPopUP } from "../../components/PopUps/ReviewDetailsPopUP";
 import Sidebar from "../../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../../components/PopUps/EditRatingPopUP";
 import { EditReviewPopUP } from "../../components/PopUps/EditReviewPopUP";
+import {getReviewAndRatingByReviewer} from "../../Services/reviewService";
 
 const GivenFeedbacks = () => {
-  const [reviewsAndRatings, setReversAndRatings] = useState(MOCK_DATA);
+  const [reviewsAndRatings, setReversAndRatings] = useState([]);
   const [currentReviewLoaded, setCurrentReviewLoaded] = useState({});
 
   const [mainPopupState, setMainPopupState] = useState(false);
   const [RatingPopupState, setRatingPopupState] = useState(false);
   const [ReviewPopupState, setReviewPopupState] = useState(false);
+
+  useEffect(() => {
+    async function fetchRatingByReviewer() {
+      const userId = localStorage.getItem("userId");
+      const privateKey = localStorage.getItem("privateKey");
+      const body = JSON.stringify({
+        reviewerId: userId,
+        privatekey: privateKey,
+      });
+
+      getReviewAndRatingByReviewer(body).then((data) => {
+        if (data.status === false) {
+          return;
+        } else {
+          setReversAndRatings(data.response);
+        }
+      });
+    }
+    fetchRatingByReviewer();
+  }, []);
 
   const onDetailsButtonClickFromMainPopUp = (review) => {
     setCurrentReviewLoaded(review);
@@ -25,14 +46,12 @@ const GivenFeedbacks = () => {
   };
 
   const onReviewEditButtonClickFromMainPopUp = () => {
-    console.log("Review Edit");
     setReviewPopupState(true);
     setMainPopupState(false);
   };
 
   const onRatingEditButtonClickFromMainPopUp = () => {
     setMainPopupState(false);
-    console.log("Rating Edit");
     setRatingPopupState(true);
   };
 
@@ -47,13 +66,11 @@ const GivenFeedbacks = () => {
   };
 
   const onEditRatingPopUpUpdateButtonClick = ({ ratings, id }) => {
-    console.log("Review Update");
-    console.log(ratings);
+
     setRatingPopupState(false);
     setMainPopupState(true);
 
     setReversAndRatings((prevReviewsAndRatings) => {
-      console.log(prevReviewsAndRatings);
       const updatedReviewsAndRatings = [...prevReviewsAndRatings];
       const index = updatedReviewsAndRatings.findIndex(
         (review) => review.id === id
@@ -68,13 +85,11 @@ const GivenFeedbacks = () => {
   };
 
   const onEditReviewPopUpUpdateButtonClick = ({ review, id }) => {
-    console.log("Review Update");
-    console.log(review);
+
     setReviewPopupState(false);
     setMainPopupState(true);
 
     setReversAndRatings((prevReviewsAndRatings) => {
-      console.log(prevReviewsAndRatings);
       const updatedReviewsAndRatings = [...prevReviewsAndRatings];
       const index = updatedReviewsAndRatings.findIndex(
         (review) => review.id === id
@@ -84,7 +99,6 @@ const GivenFeedbacks = () => {
     });
   };
 
-  console.log(mainPopupState);
   return (
     <Sidebar>
       {RatingPopupState && (

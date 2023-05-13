@@ -2,20 +2,34 @@ import React, { useState } from "react";
 import "./EditReviewPopUP.css";
 
 export function EditReviewPopUP(props) {
-  console.log(props, "props........");
+  const [review, setReview] = useState();
+  const [submitOrUpdate, setSubmitOrUpdate] = useState("Submit");
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [sharedKey, setSharedKey] = useState();
+  const [reviewId, setReviewId] = useState();
+  const isAnonymous = true;
   const {
     currentReviewLoaded = {},
     onButtonClick = () => {},
     onUpdateButtonClick = () => {},
   } = props;
-  const {
-    name = "Alice Banks",
-    designation = "Lecturer, ICT Department",
-    reviewDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.",
-    id,
-  } = currentReviewLoaded;
+  const isSubmit = !currentReviewLoaded.isReview;
 
-  const [review, setReview] = useState(reviewDescription);
+  if(currentReviewLoaded.isReview !== false){
+    if(isDataLoaded === false){
+      setReview(currentReviewLoaded.reviewResponse.reviewtext)   
+      setSharedKey(currentReviewLoaded.reviewResponse.sharedkey)
+      setReviewId(currentReviewLoaded.reviewResponse.reviewid)     
+      setSubmitOrUpdate("Update")
+      setIsDataLoaded(true)
+    }
+  }
+
+  
+  const name = currentReviewLoaded.firstname + " " + currentReviewLoaded.lastname;
+  const  designation = currentReviewLoaded.designation + "," + currentReviewLoaded.department;
+  const email = currentReviewLoaded.email
+  console.log("currentReviewLoaded",reviewId)
 
   return (
     <>
@@ -38,7 +52,7 @@ export function EditReviewPopUP(props) {
           </div>
           <div className="details-review-main-wrapper">
             <div className="review-description-title-wrapper">
-              <h3 className="details-review-heading">Update Rating</h3>
+              <h3 className="details-review-heading">{submitOrUpdate} Rating</h3>
             </div>
             <div className="details-review-wrapper">
               <textarea
@@ -51,8 +65,8 @@ export function EditReviewPopUP(props) {
               className="share-group"
               type="submit"
               area-aria-label="submit"
-              onClick={() => onUpdateButtonClick({ review, id })}>
-              <span>Update</span>
+              onClick={() => onUpdateButtonClick({ review, email,reviewId,sharedKey, isAnonymous,isSubmit })}>
+              <span>{submitOrUpdate}</span>
             </button>
           </div>
         </div>
