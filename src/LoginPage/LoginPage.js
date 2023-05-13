@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LoginPage.css"; // import the CSS file
 
 import logoImage from "../Images/logor.png";
@@ -20,13 +20,16 @@ function LoginPage() {
     progress: undefined,
     theme: "light",
   };
+  const location = useLocation();
+
   const navigate = useNavigate();
-  // const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
+  const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
 
   // useEffect(() => {
+  //   console.log("isSignUp", isSignUp);
   //   if (isSignUp) {
-  //     toast("Sign Up Successful please login", attributessOfToast);
   //     setIsSignUp(false);
+  //     toast("Sign Up Successful please login", attributessOfToast);
   //   }
   // }, []);
 
@@ -73,7 +76,7 @@ function LoginPage() {
   function saveDataToLocalStorage(response) {
     localStorage.setItem("userId", response.user.userid);
     localStorage.setItem("userType", response.user.type);
-    localStorage.setItem("userPrivateKey", response.user.privatekey);
+    localStorage.setItem("privateKey", response.user.privatekey);
   }
 
   return (

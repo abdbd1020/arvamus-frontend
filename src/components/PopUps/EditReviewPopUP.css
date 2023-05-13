@@ -204,6 +204,7 @@
     background: unset;
     margin: 40px auto 0;
     transition: all 0.3s ease-in-out;
+    width: auto;
 }
 
 .edit-review-popIn .share-group:hover {

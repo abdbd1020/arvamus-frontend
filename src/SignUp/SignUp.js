@@ -30,6 +30,7 @@ function Signup() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    event.stopPropagation();
     const errors = validateForm();
     const type = "STUDENT";
     const body = JSON.stringify({
@@ -39,6 +40,8 @@ function Signup() {
       mobile: registrationNumber,
       password: password,
       type: type,
+      designation: "designation",
+      department: "CSE",
     });
 
     if (Object.keys(errors).length === 0) {
@@ -46,7 +49,7 @@ function Signup() {
       if (response === null) {
         toast("Error in signup", attributessOfToast);
       } else {
-        console.log(response.json());
+        console.log(response);
         toast("User successfully registered", attributessOfToast);
         navigate("/login", { state: { isSignUp: true } });
       }

@@ -200,6 +200,7 @@
     background: unset;
     margin: 40px auto 0;
     transition: all 0.3s ease-in-out;
+    width: auto;
 }
 
 .edit-rating-popIn .share-group:hover {

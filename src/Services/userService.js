@@ -8,8 +8,14 @@ async function userSignUp(body) {
       body: body,
     });
     if (response.status === 200) {
+      const serverResponse = await response.json();
+      if (serverResponse.status === false) {
+        return null;
+      }
+
       return response;
     } else {
+      console.log("Error in signup");
       const errorData = await response.json();
       console.log(errorData);
       return null;

@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { MOCK_DATA } from "../demo/MOCK_DATA";
 import Sidebar from "../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../components/PopUps/EditRatingPopUP";
 import { EditReviewPopUP } from "../components/PopUps/EditReviewPopUP";
 import { UserCard } from "../components/ReviewCard/UserCard";
+import { getAllTeachers } from "../Services/appService";
+import { getReviewByRevieweeEmailAndReviewerId } from "../Services/reviewService";
 
 const Dashboard = () => {
   const [reviewsAndRatings, setReversAndRatings] = useState(MOCK_DATA);
@@ -12,13 +14,39 @@ const Dashboard = () => {
   const [RatingPopupState, setRatingPopupState] = useState(false);
   const [ReviewPopupState, setReviewPopupState] = useState(false);
 
-  const onRatingButtonClick = (review) => {
-    setCurrentReviewLoaded(review);
+  const [teachers, setTeachers] = useState([]);
+  useEffect(() => {
+    async function fetchTeachers() {
+      getAllTeachers().then((data) => {
+        if (data.status == false) {
+          console.log("Error");
+          return;
+        } else {
+          setTeachers(data.response);
+        }
+      });
+    }
+    fetchTeachers();
+  }, []);
+  const onRatingButtonClick = async (user) => {
+    
+    setCurrentReviewLoaded(user);
     setRatingPopupState(true);
   };
 
-  const onReviewButtonClick = (review) => {
-    setCurrentReviewLoaded(review);
+  const onReviewButtonClick = async (user) => {
+    // get userId from local storage
+    const userId = localStorage.getItem("userId");
+    const privateKey = localStorage.getItem("privateKey");
+    const body = JSON.stringify({
+      revieweeEmail: user.email,
+      reviewerId: userId,
+      privatekey: privateKey,
+      isReviewer: true,
+    });
+    const response = await getReviewByRevieweeEmailAndReviewerId(body);
+    user.review = response;
+    setCurrentReviewLoaded(user);
     setReviewPopupState(true);
   };
 
@@ -30,7 +58,7 @@ const Dashboard = () => {
     setReviewPopupState(false);
   };
 
-  const onRaringSubmitButtonClick = ({ ratings, id }) => {
+  const onRatingSubmitButtonClick = ({ ratings, id }) => {
     setRatingPopupState(false);
     setReversAndRatings(
       reviewsAndRatings.map((review) => {
@@ -59,7 +87,7 @@ const Dashboard = () => {
       {RatingPopupState && (
         <EditRatingPopUP
           onButtonClick={onRaringCloseButtonClick}
-          onUpdateButtonClick={onRaringSubmitButtonClick}
+          onUpdateButtonClick={onRatingSubmitButtonClick}
           currentReviewLoaded={currentReviewLoaded}
         />
       )}
@@ -73,13 +101,13 @@ const Dashboard = () => {
       <div className="review-feedback-main">
         <div className="card">
           <div className="reviews-list">
-            {reviewsAndRatings.map((review) => {
+            {teachers.map((teacher) => {
               return (
                 <UserCard
-                  key={review.id}
-                  information={review}
-                  onRatingButtonClick={() => onRatingButtonClick(review)}
-                  onReviewButtonClick={() => onReviewButtonClick(review)}
+                  key={teacher.userid}
+                  information={teacher}
+                  onRatingButtonClick={() => onRatingButtonClick(teacher)}
+                  onReviewButtonClick={() => onReviewButtonClick(teacher)}
                 />
               );
             })}

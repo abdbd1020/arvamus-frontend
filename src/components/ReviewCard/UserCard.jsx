@@ -10,8 +10,8 @@ export function UserCard(props) {
     onReviewButtonClick = () => {},
   } = props;
   const {
-    name = "Alice Banks",
-    designation = "Lecturer, ICT Department",
+    name = props.information.firstname + " " + props.information.lastname,
+    designation = props.information.designation || "Teacher",
     rating: rawRating = 3,
   } = information;
   let rating = rawRating > 5 ? 5 : rawRating;
