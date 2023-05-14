@@ -29,7 +29,6 @@ export function EditReviewPopUP(props) {
   const name = currentReviewLoaded.firstname + " " + currentReviewLoaded.lastname;
   const  designation = currentReviewLoaded.designation + "," + currentReviewLoaded.department;
   const email = currentReviewLoaded.email
-  console.log("currentReviewLoaded",reviewId)
 
   return (
     <>

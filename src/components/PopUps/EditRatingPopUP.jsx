@@ -3,28 +3,50 @@ import "./EditRatingPopUP.css";
 import RatingSelect from "../../Feedbacks/FeedbackForms/RatingForm/RatingSelect";
 
 export function EditRatingPopUP(props) {
+
+  const [submitOrUpdate, setSubmitOrUpdate] = useState("Submit");
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const [ratingId, setRatingId] = useState();
+
+  const [detailsRating, setDetailsRating] = useState([
+    { title: "Responsibility", rating: 0 },
+    { title: "Behaviour", rating: 0 },
+    { title: "Professionalism", rating: 0 },
+    { title: "Proficiency", rating: 0 },
+    { title: "Management", rating: 0 },
+  ],);
+
+
   const {
     currentReviewLoaded = {},
     onButtonClick = () => {},
     onUpdateButtonClick = () => {},
   } = props;
-  const {
-    name = "Alice Banks",
-    designation = "Lecturer, ICT Department",
-    detailsRating = [
-      { title: "Responsibility", rating: 5 },
-      { title: "Behavior", rating: 4 },
-      { title: "Professionalism", rating: 3 },
-      { title: "Proficiency", rating: 2 },
-      { title: "Management", rating: 4 },
-    ],
-    id,
-  } = currentReviewLoaded;
+  const isSubmit = !currentReviewLoaded.isRating;
+  if(currentReviewLoaded.isRating !== false){
+    if(isDataLoaded === false){
+      setRatingId(currentReviewLoaded.ratingResponse.ratingid)     
+      setSubmitOrUpdate("Update")
+      setDetailsRating(
+        [
+          { title: "Responsibility", rating: Number(currentReviewLoaded.ratingResponse.responsibility )},
+          { title: "Behaviour", rating: Number(currentReviewLoaded.ratingResponse.behaviour) },
+          { title: "Professionalism", rating: Number(currentReviewLoaded.ratingResponse.professionalism)},
+          { title: "Proficiency", rating: Number(currentReviewLoaded.ratingResponse.proficiency) },
+          { title: "Management", rating: Number(currentReviewLoaded.ratingResponse.management) },
+        ],
+      )
+      setIsDataLoaded(true)
+    }
+  }
 
-  const [ratings, setRatings] = useState([...detailsRating]);
+  const name = currentReviewLoaded.firstname + " " + currentReviewLoaded.lastname;
+  const  designation = currentReviewLoaded.designation + "," + currentReviewLoaded.department;
+  const email = currentReviewLoaded.email
+
 
   const handleRatingChange = (index, rating) => {
-    setRatings((prevRatings) => {
+    setDetailsRating((prevRatings) => {
       const updatedRatings = [...prevRatings];
       updatedRatings[index].rating = rating;
       return updatedRatings;
@@ -52,7 +74,7 @@ export function EditRatingPopUP(props) {
           </div>
           <div className="details-rating-main-wrapper">
             <div className="rating-description-title-wrapper">
-              <h3 className="details-rating-heading">Update Rating</h3>
+              <h3 className="details-rating-heading">{submitOrUpdate} Rating</h3>
             </div>
             <div className="details-rating-wrapper">
               {detailsRating.map((heading, index) => {
@@ -75,8 +97,8 @@ export function EditRatingPopUP(props) {
               className="share-group"
               type="submit"
               area-aria-label="submit"
-              onClick={() => onUpdateButtonClick({ ratings, id })}>
-              <span>Update</span>
+              onClick={() => onUpdateButtonClick({ detailsRating, email,ratingId,isSubmit  })}>
+              <span>{submitOrUpdate}</span>
             </button>
           </div>
         </div>

@@ -1,17 +1,17 @@
 import { useState,useEffect } from "react";
-import { MOCK_DATA } from "../demo/MOCK_DATA";
 import Sidebar from "../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../components/PopUps/EditRatingPopUP";
 import { EditReviewPopUP } from "../components/PopUps/EditReviewPopUP";
 import { UserCard } from "../components/ReviewCard/UserCard";
 import { getAllTeachers } from "../Services/appService";
 import { getReviewByRevieweeEmailAndReviewerId,giveReview,updateReview } from "../Services/reviewService";
+import {getRatingByRevieweeEmailAndReviewerId, giveRating ,updateRating} from "../Services/ratingService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {ServerEnum} from "../ServerEnum";
 
 const Dashboard = () => {
 
-  const [reviewsAndRatings, setReviewsAndRatings] = useState();
   const [currentReviewLoaded, setCurrentReviewLoaded] = useState({});
 
   const [RatingPopupState, setRatingPopupState] = useState(false);
@@ -42,10 +42,40 @@ const Dashboard = () => {
     fetchTeachers();
   }, []);
   
-  const onRatingButtonClick = async (user) => {
+  const onRatingButtonClick = async (data) => {
+    const userId = localStorage.getItem("userId");
+    const body = JSON.stringify({
+      revieweeEmail: data.email,
+      reviewerId: userId,
+      isReviewer: true,
+    });
+    await getRatingByRevieweeEmailAndReviewerId(body).then(
+      (response) => {
+
+        if (response.status === false) {
+          toast("Not Valid", attributessOfToast);
+          return;
+        } else {
+
+          data.isRating = true;
+          data.ratingResponse = response.response[0];
+
+          setCurrentReviewLoaded(data);
+          setRatingPopupState(true);
+        }
+      }).catch (error => {
+        if(error === ServerEnum.RESPONSE_NO_RATING_FOUND){
+              data.isRating = false;
+              setCurrentReviewLoaded(data);
+              setRatingPopupState(true);
+        }
+        else{
+          toast(error, attributessOfToast);
+        }
+      });
+
     
-    setCurrentReviewLoaded(user);
-    setRatingPopupState(true);
+   
   };
 
   
@@ -74,7 +104,7 @@ const Dashboard = () => {
           setReviewPopupState(true);
         }
       }).catch (error => {
-        if(error === "NO review found"){
+        if(error === ServerEnum.RESPONSE_NO_REVIEW_FOUND){
               data.isReview = false;
               setCurrentReviewLoaded(data);
               setReviewPopupState(true);
@@ -86,9 +116,7 @@ const Dashboard = () => {
 
 
 
-    // user.review = response.response;
-    // setCurrentReviewLoaded(user);
-    // setReviewPopupState(true);
+
   };
 
   const onRaringCloseButtonClick = () => {
@@ -99,16 +127,69 @@ const Dashboard = () => {
     setReviewPopupState(false);
   };
 
-  const onRatingSubmitButtonClick = ({ ratings, id }) => {
-    setRatingPopupState(false);
-    setReviewsAndRatings(
-      reviewsAndRatings.map((review) => {
-        if (review.id === id) {
-          return { ...review, ratings };
-        }
-        return review;
-      })
-    );
+  const onRatingSubmitButtonClick = async ({ detailsRating, email,ratingId,isSubmit }) => {
+    // setRatingPopupState(false);
+    
+    if(isSubmit){
+      const userId = localStorage.getItem("userId");
+      const body = JSON.stringify({
+
+        reviewerId: userId,
+        revieweeEmail: email,
+        responsibility: detailsRating[0].rating,
+        behaviour : detailsRating[1].rating,
+        professionalism : detailsRating[2].rating,
+        proficiency : detailsRating[3].rating,
+        management : detailsRating[4].rating,
+  
+      });
+      await giveRating(body).then(
+        (response) => {
+  
+          if (response.status === false) {
+            toast("Error", attributessOfToast);
+            return;
+          } else {
+            toast("Submission Successful", attributessOfToast);
+
+          }
+        }).catch (error => {
+          toast("Error", attributessOfToast);
+
+        });
+      
+      
+        setRatingPopupState(false);
+      return;
+    }
+    
+    else{
+      const body = JSON.stringify({
+        ratingId: ratingId,
+        responsibility: detailsRating[0].rating,
+        behaviour : detailsRating[1].rating,
+        professionalism : detailsRating[2].rating,
+        proficiency : detailsRating[3].rating,
+        management : detailsRating[4].rating,
+      });
+      await updateRating(body).then(
+        (response) => {
+  
+          if (response.status === false) {
+            toast("Error", attributessOfToast);
+            return;
+          } else {
+            toast("Update Successful", attributessOfToast);
+
+          }
+        }).catch (error => {
+          toast("Error", attributessOfToast);
+
+        });
+        setRatingPopupState(false);
+        return;
+    }
+   
   };
 
   const onReviewSubmitButtonClick = async ({ review, email ,reviewId,sharedKey, isAnonymous,isSubmit }) => {
