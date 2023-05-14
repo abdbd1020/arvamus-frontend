@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Sidebar from '../General/Sidebar/Sidebar';
 import { FaCog } from 'react-icons/fa';
-import './Settings.css'
+import './Profile.css'
 
-const Settings = () => {
+const Profile = () => {
 
     const [showChangePassword, setShowChangePassword] = useState(false);
     const [firstName, setFirstName] = useState('John Doe');
@@ -28,10 +28,7 @@ const Settings = () => {
     return (
         <Sidebar>
             <div className="account-settings">
-                <div className="header">
-                    <h1>Account Settings</h1>
-                    <FaCog className="settings-icon" />
-                </div>
+  
                 <div className="allSections">
                     <div className="section section1">       
                         <div className="fields">                 
@@ -88,4 +85,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default Profile;

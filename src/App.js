@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./LoginPage/LoginPage";
 import Signup from "./SignUp/SignUp";
 
-import Settings from "./Settings/Settings";
 import ReviewForm from "./Feedbacks/FeedbackForms/ReviewForm/ReviewForm";
 import RatingSelect from "./Feedbacks/FeedbackForms/RatingForm/RatingSelect";
 import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
@@ -11,6 +10,7 @@ import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
 import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
 import Dashboard from "./Dashboard/Dashboard";
 import HomePage from "./HomePage/HomePage";
+import Profile from "./Profile/Profile";
 // import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 // import { Navbar } from "./Navbar";
@@ -33,7 +33,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/received" element={<ReceivedFeedbacks />} />
           <Route path="/given" element={<GivenFeedbacks />} />
           <Route path="/reviewform" element={<ReviewForm />} />

@@ -42,8 +42,8 @@ const Sidebar = ({ children }) => {
           icon: <FaArrowAltCircleDown />,
         },
     {
-      path: "/settings",
-      name: "Settings",
+      path: "/profile",
+      name: "profile",
       icon: <FaRegUser />,
     },
   ];
