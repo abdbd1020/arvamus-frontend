@@ -6,6 +6,7 @@ import Navbar from "../General/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { ServerEnum } from "../ServerEnum";
 
 function Signup() {
   const navigate = useNavigate();
@@ -16,6 +17,10 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [designation, setDesignation] = useState("");
+  const [department, setDepartment] = useState("");
+  const options = ["student", "teacher", "staff"];
+  const [selectedOption, setSelectedOption] = useState(0);
 
   const attributessOfToast = {
     position: "top-right",
@@ -27,12 +32,47 @@ function Signup() {
     progress: undefined,
     theme: "light",
   };
+  const option1 = document.getElementById("option1");
+  const option2 = document.getElementById("option2");
+  const option3 = document.getElementById("option3");
+  function handleRadioChange() {
+    if (option1.checked) {
+      setSelectedOption(1);
+    } else if (option2.checked) {
+      setSelectedOption(2);
+    } else if (option3.checked) {
+      setSelectedOption(3);
+    } else {
+      setSelectedOption(0);
+    }
+  }
+  if (option1 !== null) {
+    option1.addEventListener("change", handleRadioChange);
+  }
+
+  if (option2 !== null) {
+    option2.addEventListener("change", handleRadioChange);
+  }
+
+  if (option3 !== null) {
+    option3.addEventListener("change", handleRadioChange);
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     event.stopPropagation();
     const errors = validateForm();
-    const type = "STUDENT";
+    let type = ServerEnum.STUDENT;
+    let finalDesignation = "ServerEnum.STUDENT";
+
+    if (selectedOption === 2) {
+      type = ServerEnum.TEACHER;
+    } else if (selectedOption === 3) {
+      type = ServerEnum.STAFF;
+    } else {
+      type = ServerEnum.STUDENT;
+    }
+    if (designation) finalDesignation = designation;
     const body = JSON.stringify({
       firstName: firstName,
       lastName: lastName,
@@ -40,8 +80,8 @@ function Signup() {
       mobile: registrationNumber,
       password: password,
       type: type,
-      designation: "designation",
-      department: "CSE",
+      designation: finalDesignation,
+      department: department,
     });
 
     if (Object.keys(errors).length === 0) {
@@ -49,7 +89,6 @@ function Signup() {
       if (response === null) {
         toast("Error in signup", attributessOfToast);
       } else {
-        console.log(response);
         toast("User successfully registered", attributessOfToast);
         navigate("/login", { state: { isSignUp: true } });
       }
@@ -174,6 +213,44 @@ function Signup() {
               )}
             </div>
           </div>
+
+          <div className="signup-row">
+            <div className="signup-field">
+              {/* <label className="form-label" htmlFor="first-name">
+      First Name*
+    </label> */}
+              <input
+                type="text"
+                id="designation"
+                name="designation"
+                value={designation}
+                placeholder="Enter Designation"
+                onChange={(e) => setDesignation(e.target.value)}
+                required
+                disabled={selectedOption === 1 || selectedOption === 0}
+              />
+              {errors.designation && (
+                <p className="error">{errors.designation}</p>
+              )}
+            </div>
+            <div className="signup-field">
+              {/* <label className="form-label" htmlFor="last-name">
+      Last Name
+    </label> */}
+              <input
+                type="text"
+                id="department"
+                name="last-department"
+                value={department}
+                placeholder="Enter Department"
+                onChange={(e) => setDepartment(e.target.value)}
+                required
+              />
+              {errors.department && (
+                <p className="error">{errors.department}</p>
+              )}
+            </div>
+          </div>
           <div className="signup-row">
             <div className="signup-field">
               {/* <label className="form-label" htmlFor="password">
@@ -209,7 +286,7 @@ function Signup() {
             </div>
           </div>
           <div className="signup-radio-section">
-            <h2 className="radio-heading">Impression</h2>
+            <h2 className="radio-heading">Type</h2>
             <div className="radio-options">
               <div className="specific-option">
                 <input
@@ -221,10 +298,10 @@ function Signup() {
                 />
                 <label
                   className="ind-label"
-                  style={{ color: "green" }}
+                  style={{ color: "white" }}
                   htmlFor="option1"
                 >
-                  Positive
+                  {options[0]}
                 </label>
               </div>
               <div className="specific-option">
@@ -240,7 +317,7 @@ function Signup() {
                   style={{ color: "white" }}
                   htmlFor="option2"
                 >
-                  Neutral
+                  {options[1]}
                 </label>
               </div>
               <div className="specific-option">
@@ -253,10 +330,10 @@ function Signup() {
                 />
                 <label
                   className="ind-label"
-                  style={{ color: "red" }}
+                  style={{ color: "white" }}
                   htmlFor="option3"
                 >
-                  Negative
+                  {options[2]}
                 </label>
               </div>
             </div>

@@ -22,7 +22,7 @@ module.exports = {
 
     STUDENT: "STUDENT",
     TEACHER: "TEACHER",
-    STAFF: "ADMIN",
+    STAFF: "STAFF",
 
     USER_DOES_NOT_EXIST: {
       status: false,

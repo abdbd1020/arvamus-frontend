@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LoginPage.css"; // import the CSS file
 
 import logoImage from "../Images/logor.png";
 import userService from "../Services/userService";
 import Navbar from "../General/Navbar";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
@@ -20,18 +20,17 @@ function LoginPage() {
     progress: undefined,
     theme: "light",
   };
-  // const location = useLocation();
+  const location = useLocation();
 
   const navigate = useNavigate();
-  // const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
-  //
-  // useEffect(() => {
-  //   console.log("isSignUp", isSignUp);
-  //   if (isSignUp) {
-  //     setIsSignUp(false);
-  //     toast("Sign Up Successful please login", attributessOfToast);
-  //   }
-  // }, []);
+  const [isSignUp, setIsSignUp] = useState(location.state?.isSignUp);
+
+  useEffect(() => {
+    if (isSignUp) {
+      setIsSignUp(false);
+      toast("Sign Up Successful please login", attributessOfToast);
+    }
+  }, []);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
