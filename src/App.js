@@ -3,14 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./LoginPage/LoginPage";
 import Signup from "./SignUp/SignUp";
 
+import Profile from './Profile/Profile'
 import ReviewForm from "./Feedbacks/FeedbackForms/ReviewForm/ReviewForm";
 import RatingSelect from "./Feedbacks/FeedbackForms/RatingForm/RatingSelect";
 import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
 import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
 import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
 import Dashboard from "./Dashboard/Dashboard";
+<<<<<<< HEAD
 import Profile from "./Profile/Profile";
 
+=======
+import HomePage from "./HomePage/HomePage";
+>>>>>>> b13b80e81f608155a9ed9dc9780b72dc74dfd512
 // import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 // import { Navbar } from "./Navbar";
