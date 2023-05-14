@@ -28,9 +28,18 @@ function LoginPage() {
   useEffect(() => {
     if (isSignUp) {
       setIsSignUp(false);
-      toast("Sign Up Successful please login", attributessOfToast);
+      toast("Sign Up Successful please login", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
-  }, []);
+  }, [isSignUp]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -56,7 +65,6 @@ function LoginPage() {
     });
     userService.userLogin(body).then((response) => {
       if (response.status !== true) {
-        console.log("Login failed");
         toast("Login failed", attributessOfToast);
         return;
       } else {
@@ -76,6 +84,7 @@ function LoginPage() {
     localStorage.setItem("userId", response.user.userid);
     localStorage.setItem("userType", response.user.type);
     localStorage.setItem("privateKey", response.user.privatekey);
+    localStorage.setItem("userEmail", response.user.email);
   }
 
   return (

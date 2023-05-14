@@ -1,14 +1,16 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./ReceivedFeedbacks.css";
 import { MyReviewCard } from "../../components/ReviewCard/MyReviewCard";
-import { MOCK_DATA } from "../../demo/MOCK_DATA";
 import Sidebar from "../../General/Sidebar/Sidebar";
 import { ReviewDetailsPopUP } from "../../components/PopUps/ReviewDetailsPopUP";
+import { getReviewAndRatingOfReviewee } from "../../Services/reviewService";
 
 const ReceivedFeedbacks = () => {
   const [popupState, setPopupState] = useState(false);
   const [currentReviewLoaded, setCurrentReview] = useState({});
+  const [reviewsAndRatings, setReviewsAndRatings] = useState([]);
+
 
   const onPopupButtonClick = (review) => {
     setCurrentReview(review);
@@ -17,9 +19,25 @@ const ReceivedFeedbacks = () => {
   const onPopupCloseButtonClick = () => {
     setPopupState(false);
   };
+  useEffect(() => {
+    async function fetchRatingByReviewer() {
+      const userEmail = localStorage.getItem("userEmail");
+      const privateKey = localStorage.getItem("privateKey");
+      const body = JSON.stringify({
+        revieweeemail: userEmail,
+        privatekey: privateKey,
+      });
 
-  const reviewsAndRatings = MOCK_DATA;
-  console.log(popupState);
+      getReviewAndRatingOfReviewee(body).then((data) => {
+        if (data.status === false) {
+          return;
+        } else {
+          setReviewsAndRatings(data.response);
+        }
+      });
+    }
+    fetchRatingByReviewer();
+  }, []);
   return (
     <Sidebar>
       {popupState && (

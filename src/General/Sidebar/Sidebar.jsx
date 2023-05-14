@@ -5,7 +5,7 @@ import { ServerEnum } from "../../ServerEnum";
 import {
   FaHome,
   FaBars,
-  FaCog,
+  FaRegUser,
   FaArrowAltCircleDown,
   FaArrowCircleUp,
 
@@ -44,7 +44,7 @@ const Sidebar = ({ children }) => {
     {
       path: "/settings",
       name: "Settings",
-      icon: <FaCog />,
+      icon: <FaRegUser />,
     },
   ];
   return (
@@ -53,7 +53,7 @@ const Sidebar = ({ children }) => {
         <div className="top_section">
           <div>
             {showImage && (
-              <img className="sidebar-logo-image" src={logoImage} alt="Image" />
+              <img className="sidebar-logo-image" src={logoImage} alt="" />
             )}
           </div>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Rating } from "../Rating/Rating";
 import "./ReviewDetailsPopUP.css";
+import { ServerEnum } from "../../ServerEnum";
 
 export function ReviewDetailsPopUP(props) {
 
@@ -50,7 +51,11 @@ export function ReviewDetailsPopUP(props) {
     currentReviewLoaded.reviewResponse = reviewResponse;
     currentReviewLoaded.email = currentReviewLoaded.revieweeemail;
     setName(currentReviewLoaded.firstname + " " + currentReviewLoaded.lastname);
-    setDesignation(currentReviewLoaded.designation || "Teacher");
+    if (localStorage.getItem("userType") === ServerEnum.STUDENT) {
+      setDesignation(currentReviewLoaded.designation || "Teacher");
+    } else {
+      setDesignation(currentReviewLoaded.department || "");
+    }
     setRating(Number(currentReviewLoaded.average));
     setReviewDescription(currentReviewLoaded.reviewtext);
     setReviewDate(currentReviewLoaded.date);

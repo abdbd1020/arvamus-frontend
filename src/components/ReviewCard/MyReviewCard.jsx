@@ -2,28 +2,30 @@ import React from "react";
 import { Rating } from "../Rating/Rating";
 import "./MyReviewCard.css";
 import { LetterImage } from "../ImageComponent/LetterImage";
+import { ServerEnum } from "../../ServerEnum";
 
 export function MyReviewCard(props) {
-  const [name, setName] = React.useState(""); 
+  const [name, setName] = React.useState("");
   const [designation, setDesignation] = React.useState("");
   const [rating, setRating] = React.useState(0);
   const [reviewDescription, setReviewDescription] = React.useState("");
   const [isDataLoaded, setIsDataLoaded] = React.useState(false);
   const [reviewDate, setReviewDate] = React.useState("");
 
-  const { information = {}, onButtonClick = () => {} } = props;
+  const { information = {}, onButtonClick = () => { } } = props;
   const reviewDetails = "Review Details";
-
-  if(!isDataLoaded){
+  if (!isDataLoaded) {
     setName(information.firstname + " " + information.lastname);
-    setDesignation(information.designation || "Teacher");
-    setRating(Number(information.rating));
+    if (localStorage.getItem("userType") === ServerEnum.STUDENT) {
+      setDesignation(information.designation || "Teacher");
+    } else {
+      setDesignation(information.department || "");
+    }
+    setRating(Number(information.average));
     setReviewDescription(information.reviewtext);
     setReviewDate(information.date);
     setIsDataLoaded(true);
-
   }
-
 
   return (
     <div className="review-card">

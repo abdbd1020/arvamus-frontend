@@ -9,15 +9,15 @@ import { EditReviewPopUP } from "../../components/PopUps/EditReviewPopUP";
 import {getReviewAndRatingByReviewer} from "../../Services/reviewService";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { giveRating,updateRating } from "../../Services/ratingService";
-import { giveReview,updateReview } from "../../Services/reviewService";
+import { updateRating } from "../../Services/ratingService";
+import { updateReview } from "../../Services/reviewService";
 
 
 
 const GivenFeedbacks = () => {
  
 
-  const [reviewsAndRatings, setReversAndRatings] = useState([]);
+  const [reviewsAndRatings, setReviewsAndRatings] = useState([]);
   const [currentReviewLoaded, setCurrentReviewLoaded] = useState({});
 
   const [mainPopupState, setMainPopupState] = useState(false);
@@ -34,7 +34,6 @@ const GivenFeedbacks = () => {
     theme: "light",
   };
 
-
   useEffect(() => {
     async function fetchRatingByReviewer() {
       const userId = localStorage.getItem("userId");
@@ -48,7 +47,7 @@ const GivenFeedbacks = () => {
         if (data.status === false) {
           return;
         } else {
-          setReversAndRatings(data.response);
+          setReviewsAndRatings(data.response);
         }
       });
     }
@@ -82,13 +81,11 @@ const GivenFeedbacks = () => {
     setReviewPopupState(false);
     setMainPopupState(true);
   };
-
-  const onEditReviewPopUpUpdateButtonClick = async ({ review, email ,reviewId,sharedKey, isAnonymous,isSubmit }) => {
+  const onEditReviewPopUpUpdateButtonClick = async ({ review ,reviewId,sharedKey, isAnonymous }) => {
     let zeroOrOne = 0;
     if(isAnonymous){
       zeroOrOne = 1;
     }
-
 
 
       const body = JSON.stringify({
@@ -112,50 +109,25 @@ const GivenFeedbacks = () => {
 
         });
         setReviewPopupState(false);
+        for (let i = 0; i < reviewsAndRatings.length; i++) {
+          if (reviewsAndRatings[i].reviewid === reviewId) {
+            reviewsAndRatings[i].reviewtext = review;
+            break;
+          }
+        }
+
         new Promise(resolve => setTimeout(resolve, 3000)).then(() => window.location.reload());
         return;
    
   };
 
 
-  const  onEditRatingPopUpUpdateButtonClick= async ({ detailsRating, email,ratingId,isSubmit }) => {
+  const  onEditRatingPopUpUpdateButtonClick= async ({ detailsRating, ratingId }) => {
     // setRatingPopupState(false);
     
-    if(isSubmit){
-      const userId = localStorage.getItem("userId");
-      const body = JSON.stringify({
 
-        reviewerId: userId,
-        revieweeEmail: email,
-        responsibility: detailsRating[0].rating,
-        behaviour : detailsRating[1].rating,
-        professionalism : detailsRating[2].rating,
-        proficiency : detailsRating[3].rating,
-        management : detailsRating[4].rating,
-  
-      });
-      await giveRating(body).then(
-        (response) => {
-  
-          if (response.status === false) {
-            toast("Error", attributessOfToast);
-            return;
-          } else {
-            toast("Submission Successful", attributessOfToast);
-
-          }
-        }).catch (error => {
-          toast("Error", attributessOfToast);
-
-        });
-      
-      
-        setRatingPopupState(false);
-        setMainPopupState(true);
-      return;
-    }
     
-    else{
+    
       const body = JSON.stringify({
         ratingId: ratingId,
         responsibility: detailsRating[0].rating,
@@ -181,7 +153,7 @@ const GivenFeedbacks = () => {
         setRatingPopupState(false);
         setMainPopupState(true);
         return;
-    }
+    
    
   };
 
