@@ -4,6 +4,8 @@ import "./UserCard.css";
 import { LetterImage } from "../ImageComponent/LetterImage";
 
 export function UserCard(props) {
+  const [rating, setRating] = React.useState(0); // [rating, setRating
+  const [isDataLoaded, setIsDataLoaded] = React.useState(false); // [isDataLoaded, setIsDataLoaded
   const {
     information = {},
     onRatingButtonClick = () => {},
@@ -12,9 +14,12 @@ export function UserCard(props) {
   const {
     name = props.information.firstname + " " + props.information.lastname,
     designation = props.information.designation || "Teacher",
-    rating: rawRating = 3,
   } = information;
-  let rating = rawRating > 5 ? 5 : rawRating;
+  if(Number(props.information.showrating)===1){
+    if(!isDataLoaded){
+     setRating(Number(props.information.averagerating))
+     setIsDataLoaded(true)}
+  }
 
   return (
     <div className="user-card">

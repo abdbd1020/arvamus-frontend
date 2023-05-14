@@ -4,17 +4,26 @@ import "./MyReviewCard.css";
 import { LetterImage } from "../ImageComponent/LetterImage";
 
 export function MyReviewCard(props) {
-  console.log(props)
+  const [name, setName] = React.useState(""); 
+  const [designation, setDesignation] = React.useState("");
+  const [rating, setRating] = React.useState(0);
+  const [reviewDescription, setReviewDescription] = React.useState("");
+  const [isDataLoaded, setIsDataLoaded] = React.useState(false);
+  const [reviewDate, setReviewDate] = React.useState("");
+
   const { information = {}, onButtonClick = () => {} } = props;
-  const {
-    name = "Alice Banks",
-    designation = "Lecturer, ICT Department",
-    rating: rawRating = 3,
-    reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
-    reviewDate = "Feb 13, 2021",
-    reviewDetails = "See More Details",
-  } = information;
-  let rating = rawRating > 5 ? 5 : rawRating;
+  const reviewDetails = "Review Details";
+
+  if(!isDataLoaded){
+    setName(information.firstname + " " + information.lastname);
+    setDesignation(information.designation || "Teacher");
+    setRating(Number(information.rating));
+    setReviewDescription(information.reviewtext);
+    setReviewDate(information.date);
+    setIsDataLoaded(true);
+
+  }
+
 
   return (
     <div className="review-card">

@@ -3,27 +3,68 @@ import { Rating } from "../Rating/Rating";
 import "./ReviewDetailsPopUP.css";
 
 export function ReviewDetailsPopUP(props) {
-  const {
-    currentReviewLoaded = {},
-    onButtonClick = () => {},
-    onReviewEdit = () => {},
-    onRatingEdit = () => {},
-    isEditable = false,
-  } = props;
-  const {
-    name = "Alice Banks",
-    designation = "Lecturer, ICT Department",
-    rating = 3,
-    reviewDescription = "The device has a clean design, and the metal housing feels sturdy in my hands. Soft rounded corners make it a pleasure to look at.",
-    reviewDate = "Feb 13, 2021",
-    detailsRating = [
-      { title: "Responsibility", rating: 5 },
+
+  const [isDataLoaded, setIsDataLoaded] = React.useState(false); 
+ const [detailsRating, setDetailsRating] = React.useState([
+  { title: "Responsibility", rating: 5 },
       { title: "Behavior", rating: 4 },
       { title: "Professionalism", rating: 3 },
       { title: "Proficiency", rating: 2 },
       { title: "Management", rating: 4 },
     ],
-  } = currentReviewLoaded;
+ ); 
+ const [name, setName] = React.useState(""); 
+ const [designation, setDesignation] = React.useState("");
+ const [rating, setRating] = React.useState(0);
+ const [reviewDescription, setReviewDescription] = React.useState("");
+ const [reviewDate, setReviewDate] = React.useState("");
+  const {
+    currentReviewLoaded = {},
+    onButtonClick = () => {},
+    onReviewEdit = (currentReviewLoaded) => {},
+    onRatingEdit = () => {},
+    isEditable = false,
+  } = props;
+  if(!isDataLoaded){
+    currentReviewLoaded.isReview = true;
+
+    const ratingResponse = {
+      responsibility: currentReviewLoaded.responsibility,
+      behaviour: currentReviewLoaded.behaviour,
+      professionalism: currentReviewLoaded.professionalism,
+      proficiency: currentReviewLoaded.proficiency,
+      management: currentReviewLoaded.management,
+      ratingid: currentReviewLoaded.ratingid,
+
+    };
+    currentReviewLoaded.ratingResponse = ratingResponse;
+    const reviewResponse = {
+      firstname: currentReviewLoaded.firstname,
+      lastname: currentReviewLoaded.lastname,
+      designation: currentReviewLoaded.designation,
+      reviewtext: currentReviewLoaded.reviewtext,
+      reviewid : currentReviewLoaded.reviewid,
+      sharedkey: currentReviewLoaded.sharedKey,
+      department: currentReviewLoaded.department,
+    }
+    currentReviewLoaded.reviewResponse = reviewResponse;
+    currentReviewLoaded.email = currentReviewLoaded.revieweeemail;
+    setName(currentReviewLoaded.firstname + " " + currentReviewLoaded.lastname);
+    setDesignation(currentReviewLoaded.designation || "Teacher");
+    setRating(Number(currentReviewLoaded.average));
+    setReviewDescription(currentReviewLoaded.reviewtext);
+    setReviewDate(currentReviewLoaded.date);
+    setDetailsRating(
+      [
+        { title: "Responsibility", rating: Number(currentReviewLoaded.responsibility )},
+        { title: "Behaviour", rating: Number(currentReviewLoaded.behaviour) },
+        { title: "Professionalism", rating: Number(currentReviewLoaded.professionalism)},
+        { title: "Proficiency", rating: Number(currentReviewLoaded.proficiency) },
+        { title: "Management", rating: Number(currentReviewLoaded.management) },
+      ],
+    )
+    setIsDataLoaded(true);
+  }
 
   return (
     <>
@@ -54,7 +95,7 @@ export function ReviewDetailsPopUP(props) {
                   type="button"
                   aria-label="edit review button"
                   className="edit-btn edit-review"
-                  onClick={onReviewEdit}>
+                  onClick={() => onReviewEdit(currentReviewLoaded)}>
                   <i className="fa-regular fa-pen-to-square"></i>
                 </button>
               )}

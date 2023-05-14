@@ -1,31 +1,19 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 import logoImage from "../../Images/logor.png";
+import { ServerEnum } from "../../ServerEnum";
 import {
   FaHome,
   FaBars,
-  FaStar,
   FaCog,
-  FaCommentAlt,
-  FaChalkboardTeacher,
-  FaBuilding,
-  FaIndustry,
-  FaUserFriends,
-  FaArrowAltCircleUp,
   FaArrowAltCircleDown,
-  FaArrowCircleDown,
   FaArrowCircleUp,
-  // FaTh,
-  // FaUserAlt,
-  // FaRegChartBar,
-  // FaShoppingBag,
-  // FaThList
+
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
   const [showImage, setShowImage] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -37,16 +25,22 @@ const Sidebar = ({ children }) => {
       name: "Dashboard",
       icon: <FaHome />,
     },
+    localStorage.getItem("userType") === ServerEnum.TEACHER || localStorage.getItem("userType") === ServerEnum.STAFF
+    ? null
+    : 
     {
       path: "/given",
       name: "Given Feedbacks",
       icon: <FaArrowCircleUp />,
     },
-    {
-      path: "/received",
-      name: "Received Feedbacks",
-      icon: <FaArrowAltCircleDown />,
-    },
+    
+    localStorage.getItem("userType") === ServerEnum.STUDENT
+      ? null
+      : {
+          path: "/received",
+          name: "Received Feedbacks",
+          icon: <FaArrowAltCircleDown />,
+        },
     {
       path: "/settings",
       name: "Settings",
@@ -66,16 +60,18 @@ const Sidebar = ({ children }) => {
             <FaBars onClick={toggle} />
           </div>
         </div>
-        {menuItem.map((item, index) => (
-          <NavLink to={item.path} key={index} className="link">
-            <div className="icon">{item.icon}</div>
-            <div
-              style={{ display: isOpen ? "block" : "none" }}
-              className="link_text">
-              {item.name}
-            </div>
-          </NavLink>
-        ))}
+        {menuItem.map((item, index) =>
+          item ? (
+            <NavLink to={item.path} key={index} className="link">
+              <div className="icon">{item.icon}</div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text">
+                {item.name}
+              </div>
+            </NavLink>
+          ) : null
+        )}
       </div>
       <main>{children}</main>
     </div>

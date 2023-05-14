@@ -2,20 +2,38 @@ import React from "react";
 import { useState,useEffect } from "react";
 import "./GivenFeedbacks.css";
 import { MyReviewCard } from "../../components/ReviewCard/MyReviewCard";
-import { MOCK_DATA } from "../../demo/MOCK_DATA";
 import { ReviewDetailsPopUP } from "../../components/PopUps/ReviewDetailsPopUP";
 import Sidebar from "../../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../../components/PopUps/EditRatingPopUP";
 import { EditReviewPopUP } from "../../components/PopUps/EditReviewPopUP";
 import {getReviewAndRatingByReviewer} from "../../Services/reviewService";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { giveRating,updateRating } from "../../Services/ratingService";
+import { giveReview,updateReview } from "../../Services/reviewService";
+
+
 
 const GivenFeedbacks = () => {
+ 
+
   const [reviewsAndRatings, setReversAndRatings] = useState([]);
   const [currentReviewLoaded, setCurrentReviewLoaded] = useState({});
 
   const [mainPopupState, setMainPopupState] = useState(false);
   const [RatingPopupState, setRatingPopupState] = useState(false);
   const [ReviewPopupState, setReviewPopupState] = useState(false);
+  const attributessOfToast = {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  };
+
 
   useEffect(() => {
     async function fetchRatingByReviewer() {
@@ -45,7 +63,7 @@ const GivenFeedbacks = () => {
     setMainPopupState(false);
   };
 
-  const onReviewEditButtonClickFromMainPopUp = () => {
+  const onReviewEditButtonClickFromMainPopUp = (currentReviewLoaded) => {
     setReviewPopupState(true);
     setMainPopupState(false);
   };
@@ -65,42 +83,122 @@ const GivenFeedbacks = () => {
     setMainPopupState(true);
   };
 
-  const onEditRatingPopUpUpdateButtonClick = ({ ratings, id }) => {
+  const onEditReviewPopUpUpdateButtonClick = async ({ review, email ,reviewId,sharedKey, isAnonymous,isSubmit }) => {
+    let zeroOrOne = 0;
+    if(isAnonymous){
+      zeroOrOne = 1;
+    }
 
-    setRatingPopupState(false);
-    setMainPopupState(true);
 
-    setReversAndRatings((prevReviewsAndRatings) => {
-      const updatedReviewsAndRatings = [...prevReviewsAndRatings];
-      const index = updatedReviewsAndRatings.findIndex(
-        (review) => review.id === id
-      );
-      // updatedReviewsAndRatings[index].detailsRating = ratings;
-      updatedReviewsAndRatings[index].rating =
-        ratings.reduce((acc, curr) => acc + curr.rating, 0) / ratings.length;
-      updatedReviewsAndRatings[index].ratings = ratings;
 
-      return updatedReviewsAndRatings;
-    });
+      const body = JSON.stringify({
+        reviewId: reviewId,
+        reviewText: review,
+        isAnonymous: zeroOrOne,
+        sharedKey : sharedKey,
+      });
+      await updateReview(body).then(
+        (response) => {
+  
+          if (response.status === false) {
+            toast("Error", attributessOfToast);
+            return;
+          } else {
+            toast("Update Successful", attributessOfToast);
+
+          }
+        }).catch (error => {
+          toast("Error", attributessOfToast);
+
+        });
+        setReviewPopupState(false);
+        new Promise(resolve => setTimeout(resolve, 3000)).then(() => window.location.reload());
+        return;
+   
   };
 
-  const onEditReviewPopUpUpdateButtonClick = ({ review, id }) => {
 
-    setReviewPopupState(false);
-    setMainPopupState(true);
+  const  onEditRatingPopUpUpdateButtonClick= async ({ detailsRating, email,ratingId,isSubmit }) => {
+    // setRatingPopupState(false);
+    
+    if(isSubmit){
+      const userId = localStorage.getItem("userId");
+      const body = JSON.stringify({
 
-    setReversAndRatings((prevReviewsAndRatings) => {
-      const updatedReviewsAndRatings = [...prevReviewsAndRatings];
-      const index = updatedReviewsAndRatings.findIndex(
-        (review) => review.id === id
-      );
-      updatedReviewsAndRatings[index].reviewDescription = review;
-      return updatedReviewsAndRatings;
-    });
+        reviewerId: userId,
+        revieweeEmail: email,
+        responsibility: detailsRating[0].rating,
+        behaviour : detailsRating[1].rating,
+        professionalism : detailsRating[2].rating,
+        proficiency : detailsRating[3].rating,
+        management : detailsRating[4].rating,
+  
+      });
+      await giveRating(body).then(
+        (response) => {
+  
+          if (response.status === false) {
+            toast("Error", attributessOfToast);
+            return;
+          } else {
+            toast("Submission Successful", attributessOfToast);
+
+          }
+        }).catch (error => {
+          toast("Error", attributessOfToast);
+
+        });
+      
+      
+        setRatingPopupState(false);
+        setMainPopupState(true);
+      return;
+    }
+    
+    else{
+      const body = JSON.stringify({
+        ratingId: ratingId,
+        responsibility: detailsRating[0].rating,
+        behaviour : detailsRating[1].rating,
+        professionalism : detailsRating[2].rating,
+        proficiency : detailsRating[3].rating,
+        management : detailsRating[4].rating,
+      });
+      await updateRating(body).then(
+        (response) => {
+  
+          if (response.status === false) {
+            toast("Error", attributessOfToast);
+            return;
+          } else {
+            toast("Update Successful", attributessOfToast);
+
+          }
+        }).catch (error => {
+          toast("Error", attributessOfToast);
+
+        });
+        setRatingPopupState(false);
+        setMainPopupState(true);
+        return;
+    }
+   
   };
 
   return (
     <Sidebar>
+         <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       {RatingPopupState && (
         <EditRatingPopUP
           onButtonClick={onEditRatingPopupCloseButtonClick}
@@ -118,7 +216,7 @@ const GivenFeedbacks = () => {
       {mainPopupState && (
         <ReviewDetailsPopUP
           isEditable={true}
-          onReviewEdit={onReviewEditButtonClickFromMainPopUp}
+          onReviewEdit={() =>onReviewEditButtonClickFromMainPopUp(currentReviewLoaded)}
           onRatingEdit={onRatingEditButtonClickFromMainPopUp}
           onButtonClick={onClickMainPopUpCloseButton}
           currentReviewLoaded={currentReviewLoaded}
