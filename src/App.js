@@ -10,7 +10,7 @@ import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
 import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
 import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
 import Dashboard from "./Dashboard/Dashboard";
-import HomePage from "./HomePage/HomePage";
+// import HomePage from "./HomePage/HomePage";
 // import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
 
 // import { Navbar } from "./Navbar";
@@ -29,7 +29,7 @@ function App() {
           {/* <Route path="/" element={<TeacherReviews />} /> */}
           {/* <Route path="/" element={<IndividualReviews />} /> */}
           {/* <Route path="/signupChoice" element={<SignupChoice />} /> */}
-          <Route path="/home" element={<HomePage />} />
+          {/* <Route path="/home" element={<HomePage />} /> */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
