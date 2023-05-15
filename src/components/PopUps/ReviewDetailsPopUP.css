@@ -9,6 +9,23 @@
     z-index: 9;
     background: #6d698f7d;
 }
+.toggle-button-anon {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: unset;
+    margin-top: 33px;
+    margin-left: 10px;
+  }
+  .toggle-button-anon.active {
+    background-color: green;
+  }
+
+  
 
 .review-details-popIn {
     position: absolute;

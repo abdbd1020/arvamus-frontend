@@ -23,7 +23,7 @@ function Signup() {
   const [selectedOption, setSelectedOption] = useState(0);
 
   const attributessOfToast = {
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,

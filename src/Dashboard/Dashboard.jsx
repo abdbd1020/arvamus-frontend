@@ -192,12 +192,12 @@ const Dashboard = () => {
    
   };
 
-  const onReviewSubmitButtonClick = async ({ review, email ,reviewId,sharedKey, isAnonymous,isSubmit }) => {
-    let zeroOrOne = 0;
-    if(isAnonymous){
-      zeroOrOne = 1;
+  const onReviewSubmitButtonClick = async ({ review, email ,reviewId,sharedKey, toggleSetting,isSubmit }) => {
+    let zeroOrOne = "0";
+    if(toggleSetting){
+      zeroOrOne = "1";
     }
-
+    console.log(zeroOrOne);
     if(isSubmit){
       const userId = localStorage.getItem("userId");
       const privateKey = localStorage.getItem("privateKey");

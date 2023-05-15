@@ -30,8 +30,8 @@ export function UserCard(props) {
           <p className="info">
             <span className="name">{name}</span>
             <span className="designation">{designation}</span>
-            <span className="user-Rating"> User Rating</span>
-            <Rating rating={rating} />
+            {Number(props.information.showrating)===1?<span className="user-Rating"> User Rating</span>:<span className="user-Rating"> User Rating is not visible</span>}
+            {Number(props.information.showrating)===1?<Rating rating={rating} />:null}
           </p>
         </div>
       </div>

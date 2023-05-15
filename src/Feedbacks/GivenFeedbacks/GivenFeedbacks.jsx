@@ -81,10 +81,10 @@ const GivenFeedbacks = () => {
     setReviewPopupState(false);
     setMainPopupState(true);
   };
-  const onEditReviewPopUpUpdateButtonClick = async ({ review ,reviewId,sharedKey, isAnonymous }) => {
-    let zeroOrOne = 0;
-    if(isAnonymous){
-      zeroOrOne = 1;
+  const onEditReviewPopUpUpdateButtonClick = async ({ review ,reviewId,sharedKey, toggleSetting }) => {
+    let zeroOrOne = "0";
+    if(toggleSetting){
+      zeroOrOne = "1";
     }
 
 
